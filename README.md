@@ -7,7 +7,7 @@ Proyecto Bimestre 1 · Desarrollo de Aplicaciones Web · Escuela Politécnica Na
 Entrega: **miércoles 18 de noviembre de 2026, 23:59**
 
 - **Sitio publicado:** `https://USUARIO.github.io/vetcare/` *(pendiente)*
-- **Repositorio:** `https://github.com/USUARIO/vetcare` *(pendiente)*
+- **Repositorio:** `https://github.com/AplicacionesWebGR2SW2026BGR6/vetcare` *(pendiente)*
 - **Documentos:** carpeta del grupo en OneDrive (Word de entregables y Excel de datos de ejemplo)
 
 ## Qué es VetCare
@@ -196,9 +196,6 @@ Cada integrante trabaja en su rama y abre un *pull request* a `main`; el Integra
 
 ```bash
 git clone https://github.com/USUARIO/vetcare.git
-cd vetcare
-git config user.name "Tu Nombre"
-git config user.email "el-correo-de-tu-cuenta-de-github"   # si no coincide, tus commits no cuentan como tuyos
 git switch -c modulo-propietarios                          # tu rama
 
 # trabajar, y luego:
@@ -239,17 +236,3 @@ git push -u origin modulo-propietarios
 - [ ] Priorización MoSCoW final
 - [ ] Relaciones «include» y «extend» del diagrama de casos de uso
 - [ ] Enlaces del repositorio y de GitHub Pages en este README
-
-## Antes de entregar
-
-- [ ] Las 32 pantallas existen y el mapa navegacional coincide uno a uno con ellas
-- [ ] Ningún enlace roto: recorrer el sitio publicado desde `index.html` con los tres roles
-- [ ] Cada HTML pasa validator.w3.org y cada CSS pasa jigsaw, sin errores
-- [ ] Diseño y validación se comportan igual en Chrome y Firefox
-- [ ] Sin `style="…"`, sin `novalidate`, sin JavaScript y sin frameworks
-- [ ] Datos de ejemplo coherentes en todas las pantallas
-- [ ] Lo escrito en "Reglas y validaciones" de cada CU coincide con el HTML, y "Pantallas relacionadas" usa los nombres reales
-- [ ] Commits de los cuatro integrantes en `main`
-- [ ] `plantilla.html` y `bloques.html` borrados
-- [ ] PDF en `docs/` y este README completo
-- [ ] URL del repositorio y del sitio pegadas en el aula virtual
