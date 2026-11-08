@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare</title>
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+    <main>
+        <h1>Bloques de VetCare</h1>
+
+        <section>
+            <h2>Formulario de mascota</h2>
+
+            <form action="mascotas-listado.html" method="get">
+                <div>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="40">
+
+                        <label for="raza">Raza</label>
+                        <input type="text" id="raza" name="raza" list="razas" placeholder="Ej. Mestizo">
+                        <datalist id="razas">
+                            <option value="Mestizo">Mestizo</option>
+                            <option value="Beagle">Beagle</option>
+                            <option value="Caniche (Poodle)">Caniche (Poodle)</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Golden retriever">Golden retriever</option>
+                            <option value="Labrador retriever">Labrador retriever</option>
+                            <option value="Schnauzer miniatura">Schnauzer miniatura</option>
+                            <option value="Shih Tzu">Shih Tzu</option>
+                            <option value="Maine Coon">Maine Coon</option>
+                            <option value="Persa">Persa</option>
+                            <option value="Ragdoll">Ragdoll</option>
+                            <option value="Siamés">Siamés</option>
+                        </datalist>
+
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento" max="2026-11-18">
+
+                    </div>
+                    <div>
+                        <label for="especie">Especie</label>
+                        <select name="especie" id="especie" required>
+                            <option value="">Seleccione una especie</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                            <option value="roedor">Roedor</option>
+                            <option value="otro">Otro</option>
+                        </select>
+
+
+                        <fieldset>
+                            <legend>Sexo</legend>
+                            <input type="radio" id="sexo-macho" name="sexo" value="macho" required>
+                            <label for="sexo-macho">Macho</label>
+
+                            <input type="radio" id="sexo-hembra" name="sexo" value="hembra" required>
+                            <label for="sexo-hembra">Hembra</label>
+                        </fieldset>
+
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" name="peso" min="0.1" max="120" step="0.1" placeholder="Ej. 8.4">
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="propietario">Propietario</label>
+                    <select name="propietario" id="propietario" required>
+                        <option value="">Seleccione un propietario</option>
+                        <option value="P01">Ana Morales</option>
+                        <option value="P02">Carlos Vega</option>
+                        <option value="P03">Sofía Herrera</option>
+                        <option value="P04">Diego Castillo</option>
+                    </select>
+
+                    <label for="observaciones">Observaciones</label>
+                    <textarea name="observaciones" id="observaciones"  maxlength="300" cols="30" rows="10" placeholder="Información adicional de la mascota"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Guardar</button>
+                    <a href="mascotas-listado.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mascotas</h2>
+
+            <label for="buscar-mascota">Buscar por mascota o propietario</label>
+            <input type="search" id="buscar-mascota">
+            <table>
+                <caption>Mascotas registradas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Mascota</th>
+                        <th scope="col">Especie</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Propietario</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toby</td>
+                        <td>Perro</td>
+                        <td>-</td>
+                        <td>Ana Morales</td>
+                        <td>
+                            <a href="mascotas-detalle.html">Ver</a>
+                            <a href="mascotas-editar.html">Editar</a>
+                            <a href="mascotas-eliminar.html">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Copito</td>
+                        <td>Roedor</td>
+                        <td>-</td>
+                        <td>Ana Morales</td>
+                        <td>
+                            <a href="mascotas-detalle.html">Ver</a>
+                            <a href="mascotas-editar.html">Editar</a>
+                            <a href="mascotas-eliminar.html">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michi</td>
+                        <td>Gato</td>
+                        <td>-</td>
+                        <td>Carlos Vega</td>
+                        <td>
+                            <a href="mascotas-detalle.html">Ver</a>
+                            <a href="mascotas-editar.html">Editar</a>
+                            <a href="mascotas-eliminar.html">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kiwi</td>
+                        <td>Ave</td>
+                        <td>-</td>
+                        <td>Sofía Herrera</td>
+                        <td>
+                            <a href="mascotas-detalle.html">Ver</a>
+                            <a href="mascotas-editar.html">Editar</a>
+                            <a href="mascotas-eliminar.html">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Luna</td>
+                        <td>Perro</td>
+                        <td>-</td>
+                        <td>Diego Castillo</td>
+                        <td>
+                            <a href="mascotas-detalle.html">Ver</a>
+                            <a href="mascotas-editar.html">Editar</a>
+                            <a href="mascotas-eliminar.html">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </section>
+
+        <section>
+            <h2>Ficha de Toby</h2>
+
+            <dl>
+                <div>
+                    <dt>Nombre</dt>
+                    <dd>Toby</dd>
+                </div>
+                <div>
+                    <dt>Especie</dt>
+                    <dd>Perro</dd>
+                </div>
+                <div>
+                    <dt>Raza</dt>
+                    <dd>-</dd>
+                </div>
+                <div>
+                    <dt>Sexo</dt>
+                    <dd>-</dd>
+                </div>
+                <div>
+                    <dt>Fecha de nacimiento</dt>
+                    <dd>-</dd>
+                </div>
+                <div>
+                    <dt>Peso (kg)</dt>
+                    <dd>-</dd>
+                </div>
+                <div>
+                    <dt>Propietario</dt>
+                    <dd>Ana Morales</dd>
+                </div>
+                <div>
+                    <dt>Observaciones</dt>
+                    <dd>-</dd>
+                </div>
+            </dl>
+
+            <div>
+                <a href="citas-nueva.html">Agendar cita</a>
+                <a href="mascotas-editar.html">Editar ficha</a>
+                <a href="historial-clinico.html">Ver historial</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Confirmar la eliminación</h2>
+
+            <p>Esta acción elimina el registro de Toby</p>
+
+            <dl>
+                <div>
+                    <dt>Mascota</dt>
+                    <dd>Toby</dd>
+                </div>
+                <div>
+                    <dt>Especie</dt>
+                    <dd>Perro</dd>
+                </div>
+                <div>
+                    <dt>Raza</dt>
+                    <dd>-</dd>
+                </div>
+                <div>
+                    <dt>Propietario</dt>
+                    <dd>Ana Morales</dd>
+                </div>
+            </dl>
+
+            <div>
+                <a href="mascotas-listado.html">Confirmar eliminación</a>
+                <a href="mascotas-listado.html">Cancelar</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Historial clínico de Toby</h2>
+
+            <article>
+                <h3>Consulta general</h3>
+                <dl>
+                    <div>
+                        <dt>Servicio</dt>
+                        <dd>Consulta general</dd>
+                    </div>
+                    <div>
+                        <dt>Fecha y hora</dt>
+                        <dd>16 de noviembre de 2026, 08:30</dd>
+                    </div>
+                    <div>
+                        <dt>Veterinario</dt>
+                        <dd>Dr. Pablo Andrade</dd>
+                    </div>
+                    <div>
+                        <dt>Estado de la cita</dt>
+                        <dd>Atendida</dd>
+                    </div>
+                    <div>
+                        <dt>Diagnóstico</dt>
+                        <dd>-</dd>
+                    </div>
+                    <div>
+                        <dt>Tratamiento</dt>
+                        <dd>-</dd>
+                    </div>
+                    <div>
+                        <dt>Peso registrado (kg)</dt>
+                        <dd>-</dd>
+                    </div>
+                </dl>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
