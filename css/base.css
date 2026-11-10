@@ -350,7 +350,7 @@ body.acceso {
     color: var(--color-primario);
 }
 
-.boton-secundario[accion="cerrarsesion"]{
+.boton-secundario[data-accion="cerrarsesion"]{
     border-color: var(--color-superficie);
     margin-top: var(--espacio-3);
     color: var(--color-superficie);
@@ -361,7 +361,7 @@ body.acceso {
     color: var(--color-superficie);
 }
 
-.boton-secundario:hover[accion="cerrarsesion"]{
+.boton-secundario:hover[data-accion="cerrarsesion"]{
     background-color: var(--color-superficie);
     color: var(--color-primario);
 }
