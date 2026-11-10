@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión · VetCare</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/formularios.css"> 
+</head>
+<body class="acceso">
+    <main class="tarjeta tarjeta-login">
+        <header class="login-encabezado">
+            <div class="icon login-icono">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <p class="login-titulo">Huellitas</h3>
+            <p class="texto-pequeno">VetCare - Clinica Veterinaria</p>
+        </header>
+        <section>
+            <h1 class="login-subtitulo">Iniciar sesión</h1>
+            <form class="formulario" action="pages/recepcion-inicio.html" method="get"></form>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" required placeholder="nombre@huellitas.com" autocomplete="email">
+                </div>
+
+                <div class="campo">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required minlength="8" maxlength="30" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,30}" title="Mínimo 8 caracteres, con al menos una letra y un número.">
+                    <br><span class="texto-pequeno">Mínimo 8 caracteres, con al menos una letra y un número.</span>
+                </div>
+
+                <div class="botones botones-vertical">
+                    <button type="submit" class="boton boton-primario" formaction="pages/recepcion-inicio.html">Ingresar como recepcionista</button>
+                    <button type="submit" class="boton boton-secundario" formaction="pages/veterinario-inicio.html">Ingresar como veterinario</button>
+                    <button type="submit" class="boton boton-secundario" formaction="pages/admin-inicio.html">Ingresar como administrador</button>
+                </div>
+            </form>
+        </section> 
+    </main>
+</body>
+</html>

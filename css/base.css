@@ -289,6 +289,26 @@ body.acceso {
     padding: var(--espacio-3);
 }
 
+.login-encabezado {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.login-titulo{
+    font-size: var(--fs-2xl);
+    font-weight: var(--peso-titulo);
+    line-height: var(--interlineado-titulos)
+}
+
+.login-subtitulo{
+    font-size: var(--fs-3xl);
+}
+
+.login-icono{
+    align-items: center;
+}
+
 .boton {
     display: inline-flex;
     align-items: center;
@@ -347,12 +367,20 @@ body.acceso {
     gap: var(--espacio-3);
 }
 
+.botones-vertical{
+    flex-direction: column;
+}
+
 .tarjeta {
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
     border-radius: var(--radios-lg);
     box-shadow: var(--sombra-sm);
     padding: var(--espacio-4);
+}
+
+.tarjeta-login{
+    box-shadow: var(--sombra-lg);
 }
 
 .oculto-visual {
