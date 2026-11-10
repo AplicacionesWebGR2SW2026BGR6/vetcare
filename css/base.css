@@ -135,6 +135,10 @@ h1{ font-size: var(--fs-xl); }
 h2 { font-size: var(--fs-lg); }
 h3 { font-size: var(--fs-base); }
 
+.dashboard{
+    font-size: var(--fs-3xl);
+}
+
 .texto-suave {
     color: var(--color-texto-suave);
 }
@@ -346,9 +350,20 @@ body.acceso {
     color: var(--color-primario);
 }
 
+.boton-secundario[accion="cerrarsesion"]{
+    border-color: var(--color-superficie);
+    margin-top: var(--espacio-3);
+    color: var(--color-superficie);
+}
+
 .boton-secundario:hover {
     background-color: var(--color-primario);
     color: var(--color-superficie);
+}
+
+.boton-secundario:hover[accion="cerrarsesion"]{
+    background-color: var(--color-superficie);
+    color: var(--color-primario);
 }
 
 .boton-peligro {
@@ -462,4 +477,5 @@ body.acceso {
     }
 
     h1 { font-size: var(--fs-3xl); }
+
 }

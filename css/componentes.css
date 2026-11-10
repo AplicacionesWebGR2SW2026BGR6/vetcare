@@ -27,6 +27,9 @@
    .tarjetas
      Contenedor de las tarjetas en columnas con Grid:
      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    
+    .numero
+      Es el número de algún dato. Debería ser de tamaño 3xl.
 
    .tarjeta-menu
      Cada tarjeta es un <a> con class="tarjeta tarjeta-menu".
