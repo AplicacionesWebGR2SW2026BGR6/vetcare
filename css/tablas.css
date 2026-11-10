@@ -1,0 +1,90 @@
+/* =========================================================
+   VetCare · tablas.css
+   Responsable: Integrante 4
+
+   Qué hace: el aspecto de los listados (propietarios, mascotas,
+   citas, veterinarios, servicios y la agenda del día): la barra
+   con el buscador y el botón de crear, y la tabla.
+
+   Reglas:
+   - Solo variables de base.css: var(--color-...), var(--espacio-...),
+     var(--radios-...). Ningún color escrito a mano.
+   - Los botones (.boton, .boton-primario...) y .tarjeta ya
+     están en base.css: aquí no se repiten.
+   - Los @media van al final, con los mismos puntos de quiebre:
+     (min-width: 768px) y (min-width: 1200px).
+
+   Requisitos de la rúbrica que se cubren en esta hoja:
+   - :nth-child() en tablas (filas alternas).
+   - Tablas accesibles: caption, thead, tbody y th con scope
+     (eso va en el HTML; aquí solo se les da estilo).
+   ========================================================= */
+
+
+/* ---------- Barra superior del listado ----------
+   .barra
+     Fila con el buscador a la izquierda y el botón "Nuevo..." a la
+     derecha (Flexbox con justify-content: space-between).
+     En el teléfono, el botón pasa debajo (flex-wrap: wrap).
+
+   .buscador
+     El <form role="search">: el campo de búsqueda + el botón Buscar
+     en una fila.
+
+   .buscador input[type="search"]
+     Campo en forma de píldora: var(--radios-completo),
+     alto var(--alto-control), borde var(--color-borde-control).
+
+   .buscador label
+     Si no quieren mostrar la etiqueta, en el HTML se le pone
+     class="oculto-visual" (ya está en base.css).
+*/
+
+
+/* ---------- Contenedor de la tabla ----------
+   .tabla-contenedor
+     El <div> que envuelve la tabla. IMPRESCINDIBLE:
+     overflow-x: auto;
+     Sin esto, en el teléfono la tabla empuja toda la página hacia
+     los lados. Se combina con .tarjeta: class="tabla-contenedor tarjeta".
+*/
+
+
+/* ---------- La tabla ----------
+   .tabla
+     width: 100%; border-collapse: collapse; letra var(--fs-sm).
+
+   .tabla caption
+     Título de la tabla, alineado a la izquierda, en negrilla.
+
+   .tabla th
+     Encabezados: texto pequeño, en mayúsculas y color
+     var(--color-texto-suave).
+
+   .tabla td
+     Relleno con var(--espacio-3) y una línea superior
+     var(--color-borde) entre filas.
+
+   .tabla tbody tr:nth-child(even)
+     Filas alternas con var(--color-fila-alterna).
+
+   .tabla tbody tr:hover
+     Opcional: resaltar la fila bajo el cursor.
+*/
+
+
+/* ---------- Acciones de cada fila ----------
+   .acciones
+     La celda con los enlaces Ver, Editar y Eliminar.
+     Recomendado ponerlos uno debajo de otro (flex-direction: column)
+     para que la tabla quepa junto al panel de ayuda.
+
+   .acciones a
+     Enlaces en negrilla.
+*/
+
+
+/* ---------- Puntos de quiebre ----------
+   @media (min-width: 768px)  { ... }
+   @media (min-width: 1200px) { ... }
+*/

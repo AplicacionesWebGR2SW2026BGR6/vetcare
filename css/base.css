@@ -131,7 +131,7 @@ h1, h2, h3 {
     line-height: var(--interlineado-titulos);
 }
 
-h1 { font-size: var(--fs-xl); }
+h1{ font-size: var(--fs-xl); }
 h2 { font-size: var(--fs-lg); }
 h3 { font-size: var(--fs-base); }
 
@@ -168,6 +168,12 @@ h3 { font-size: var(--fs-base); }
     padding: var(--espacio-3);
     background-color: var(--color-primario);
     color: var(--color-superficie);
+}
+
+.icon img {
+    width: var(--espacio-6);
+    height: auto;
+    margin-bottom: var(--espacio-2);
 }
 
 .encabezado :focus-visible {

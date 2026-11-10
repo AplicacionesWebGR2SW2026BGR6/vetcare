@@ -1,0 +1,100 @@
+/* =========================================================
+   VetCare · componentes.css
+   Responsable: Integrante 3
+
+   Qué hace: las piezas visuales que aparecen solo en algunas
+   pantallas: tarjetas de los menús de inicio, datos de los
+   detalles y confirmaciones, etiquetas de estado de las citas,
+   historial clínico y avisos.
+
+   Reglas:
+   - Solo variables de base.css: var(--color-...), var(--espacio-...),
+     var(--radios-...). Ningún color escrito a mano.
+   - .tarjeta, .botones y los botones ya están en base.css:
+     aquí no se repiten.
+   - Los @media van al final, con los mismos puntos de quiebre:
+     (min-width: 768px) y (min-width: 1200px).
+
+   Requisitos de la rúbrica que se cubren en esta hoja:
+   - Selectores de atributo: .estado[data-estado="..."].
+   - Grid (tarjetas y datos) y transiciones (tarjetas del menú).
+   ========================================================= */
+
+
+/* ---------- Menús de inicio ----------
+   (recepcion-inicio, veterinario-inicio, admin-inicio)
+
+   .tarjetas
+     Contenedor de las tarjetas en columnas con Grid:
+     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+   .tarjeta-menu
+     Cada tarjeta es un <a> con class="tarjeta tarjeta-menu".
+     Necesita display: grid (si no, se ve cortada y montada
+     sobre el título) y text-decoration: none.
+
+   .tarjeta-menu:hover
+     Sube la sombra a var(--sombra-md), con transición.
+
+   .tarjeta-menu strong
+     El nombre de la sección, más grande: var(--fs-lg).
+*/
+
+
+/* ---------- Datos de un registro ----------
+   (detalle, confirmar eliminación, historial)
+
+   .datos
+     El <dl> con los datos. En columnas con Grid:
+     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+   .datos dt
+     Nombre del dato: pequeño, en mayúsculas, color suave.
+
+   .datos dd
+     Valor del dato, en negrilla.
+
+   article.tarjeta
+     El registro (ficha, confirmación, cada atención del historial).
+     Separar sus partes con display: grid y gap: var(--espacio-4).
+*/
+
+
+/* ---------- Estados de las citas ----------
+   .estado
+     Etiqueta tipo píldora: radio var(--radios-completo),
+     texto pequeño en negrilla, white-space: nowrap.
+
+   .estado[data-estado="Programada"]
+     Fondo var(--color-informacion-fondo), texto var(--color-informacion-texto).
+
+   .estado[data-estado="Atendida"]
+     Fondo var(--color-valido-fondo), texto var(--color-valido-texto).
+
+   .estado[data-estado="Cancelada"]
+     Fondo var(--color-error-fondo), texto var(--color-error-texto).
+
+   En el HTML: <span class="estado" data-estado="Atendida">Atendida</span>
+*/
+
+
+/* ---------- Listas dentro de un detalle ----------
+   .lista
+     Por ejemplo, las mascotas de un propietario o las próximas
+     citas de un veterinario: un elemento por línea, separados
+     por una línea var(--color-borde).
+*/
+
+
+/* ---------- Avisos ----------
+   .aviso
+     Recuadro para mensajes como "Esta acción no se puede deshacer".
+     Fondo var(--color-error-fondo), texto var(--color-error-texto),
+     esquinas var(--radios-md).
+*/
+
+
+/* ---------- Puntos de quiebre ----------
+   @media (min-width: 768px)  { ... }
+   @media (min-width: 1200px) { ... }
+*/

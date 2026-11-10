@@ -5,42 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetCare</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
 </head>
 <body>
-    <main>
-        <h1>Bloques de VetCare</h1>
+    <!--
+        BLOQUES DE VETCARE
+        Cada pantalla es plantilla.html + UNO de estos bloques dentro de su <section class="pagina">.
+        También sirve para probar los estilos de las cuatro hojas.
+        No es una pantalla del sistema: no va en el mapa y se borra antes de entregar.
+    -->
+    <main class="contenido">
+        <div class="pagina">
+            <h1>Bloques de VetCare</h1>
 
-        <section>
-            <h2>Formulario de mascota</h2>
+            <!-- ============================================================
+                 BLOQUE 1 · FORMULARIO (Crear y Editar)
+                 Crear: campos vacíos. Editar: el mismo formulario con value, selected y checked.
+                 Clases: formulario, tarjeta, campo, opciones, botones, boton
+                 ============================================================ -->
+            <section>
+                <h2>Formulario de mascota</h2>
 
-            <form action="mascotas-listado.html" method="get">
-                <div>
-                    <div>
+                <form class="formulario tarjeta" action="mascotas-listado.html" method="get">
+                    <div class="campo">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="40">
+                    </div>
 
+                    <div class="campo">
                         <label for="raza">Raza</label>
                         <input type="text" id="raza" name="raza" list="razas" placeholder="Ej. Mestizo">
-                        <datalist id="razas">
-                            <option value="Mestizo">Mestizo</option>
-                            <option value="Beagle">Beagle</option>
-                            <option value="Caniche (Poodle)">Caniche (Poodle)</option>
-                            <option value="Chihuahua">Chihuahua</option>
-                            <option value="Golden retriever">Golden retriever</option>
-                            <option value="Labrador retriever">Labrador retriever</option>
-                            <option value="Schnauzer miniatura">Schnauzer miniatura</option>
-                            <option value="Shih Tzu">Shih Tzu</option>
-                            <option value="Maine Coon">Maine Coon</option>
-                            <option value="Persa">Persa</option>
-                            <option value="Ragdoll">Ragdoll</option>
-                            <option value="Siamés">Siamés</option>
-                        </datalist>
+            <datalist id="razas">
+                <option value="Mestizo">Mestizo</option>
+                <option value="Beagle">Beagle</option>
+                <option value="Caniche (Poodle)">Caniche (Poodle)</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Golden retriever">Golden retriever</option>
+                <option value="Labrador retriever">Labrador retriever</option>
+                <option value="Schnauzer miniatura">Schnauzer miniatura</option>
+                <option value="Shih Tzu">Shih Tzu</option>
+                <option value="Maine Coon">Maine Coon</option>
+                <option value="Persa">Persa</option>
+                <option value="Ragdoll">Ragdoll</option>
+                <option value="Siamés">Siamés</option>
+            </datalist>
+                    </div>
 
+                    <div class="campo">
                         <label for="nacimiento">Fecha de nacimiento</label>
                         <input type="date" id="nacimiento" name="nacimiento" max="2026-11-18">
-
                     </div>
-                    <div>
+
+                    <div class="campo">
                         <label for="especie">Especie</label>
                         <select name="especie" id="especie" required>
                             <option value="">Seleccione una especie</option>
@@ -50,234 +68,301 @@
                             <option value="roedor">Roedor</option>
                             <option value="otro">Otro</option>
                         </select>
+                    </div>
 
+                    <fieldset class="opciones">
+                        <legend>Sexo</legend>
+                        <input type="radio" id="sexo-macho" name="sexo" value="macho" required>
+                        <label for="sexo-macho">Macho</label>
 
-                        <fieldset>
-                            <legend>Sexo</legend>
-                            <input type="radio" id="sexo-macho" name="sexo" value="macho" required>
-                            <label for="sexo-macho">Macho</label>
+                        <input type="radio" id="sexo-hembra" name="sexo" value="hembra" required>
+                        <label for="sexo-hembra">Hembra</label>
+                    </fieldset>
 
-                            <input type="radio" id="sexo-hembra" name="sexo" value="hembra" required>
-                            <label for="sexo-hembra">Hembra</label>
-                        </fieldset>
-
+                    <div class="campo">
                         <label for="peso">Peso (kg)</label>
                         <input type="number" id="peso" name="peso" min="0.1" max="120" step="0.1" placeholder="Ej. 8.4">
                     </div>
 
-                </div>
-
-                <div>
-                    <label for="propietario">Propietario</label>
-                    <select name="propietario" id="propietario" required>
-                        <option value="">Seleccione un propietario</option>
-                        <option value="P01">Ana Morales</option>
-                        <option value="P02">Carlos Vega</option>
-                        <option value="P03">Sofía Herrera</option>
-                        <option value="P04">Diego Castillo</option>
-                    </select>
-
-                    <label for="observaciones">Observaciones</label>
-                    <textarea name="observaciones" id="observaciones"  maxlength="300" cols="30" rows="10" placeholder="Información adicional de la mascota"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit">Guardar</button>
-                    <a href="mascotas-listado.html">Cancelar</a>
-                </div>
-            </form>
-        </section>
-
-        <section>
-            <h2>Mascotas</h2>
-
-            <label for="buscar-mascota">Buscar por mascota o propietario</label>
-            <input type="search" id="buscar-mascota">
-            <table>
-                <caption>Mascotas registradas</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Mascota</th>
-                        <th scope="col">Especie</th>
-                        <th scope="col">Raza</th>
-                        <th scope="col">Propietario</th>
-                        <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Toby</td>
-                        <td>Perro</td>
-                        <td>-</td>
-                        <td>Ana Morales</td>
-                        <td>
-                            <a href="mascotas-detalle.html">Ver</a>
-                            <a href="mascotas-editar.html">Editar</a>
-                            <a href="mascotas-eliminar.html">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Copito</td>
-                        <td>Roedor</td>
-                        <td>-</td>
-                        <td>Ana Morales</td>
-                        <td>
-                            <a href="mascotas-detalle.html">Ver</a>
-                            <a href="mascotas-editar.html">Editar</a>
-                            <a href="mascotas-eliminar.html">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Michi</td>
-                        <td>Gato</td>
-                        <td>-</td>
-                        <td>Carlos Vega</td>
-                        <td>
-                            <a href="mascotas-detalle.html">Ver</a>
-                            <a href="mascotas-editar.html">Editar</a>
-                            <a href="mascotas-eliminar.html">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Kiwi</td>
-                        <td>Ave</td>
-                        <td>-</td>
-                        <td>Sofía Herrera</td>
-                        <td>
-                            <a href="mascotas-detalle.html">Ver</a>
-                            <a href="mascotas-editar.html">Editar</a>
-                            <a href="mascotas-eliminar.html">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Luna</td>
-                        <td>Perro</td>
-                        <td>-</td>
-                        <td>Diego Castillo</td>
-                        <td>
-                            <a href="mascotas-detalle.html">Ver</a>
-                            <a href="mascotas-editar.html">Editar</a>
-                            <a href="mascotas-eliminar.html">Eliminar</a>
-                        </td>
-                    </tr>
-                </tbody>
-
-
-            </table>
-        </section>
-
-        <section>
-            <h2>Ficha de Toby</h2>
-
-            <dl>
-                <div>
-                    <dt>Nombre</dt>
-                    <dd>Toby</dd>
-                </div>
-                <div>
-                    <dt>Especie</dt>
-                    <dd>Perro</dd>
-                </div>
-                <div>
-                    <dt>Raza</dt>
-                    <dd>-</dd>
-                </div>
-                <div>
-                    <dt>Sexo</dt>
-                    <dd>-</dd>
-                </div>
-                <div>
-                    <dt>Fecha de nacimiento</dt>
-                    <dd>-</dd>
-                </div>
-                <div>
-                    <dt>Peso (kg)</dt>
-                    <dd>-</dd>
-                </div>
-                <div>
-                    <dt>Propietario</dt>
-                    <dd>Ana Morales</dd>
-                </div>
-                <div>
-                    <dt>Observaciones</dt>
-                    <dd>-</dd>
-                </div>
-            </dl>
-
-            <div>
-                <a href="citas-nueva.html">Agendar cita</a>
-                <a href="mascotas-editar.html">Editar ficha</a>
-                <a href="historial-clinico.html">Ver historial</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Confirmar la eliminación</h2>
-
-            <p>Esta acción elimina el registro de Toby</p>
-
-            <dl>
-                <div>
-                    <dt>Mascota</dt>
-                    <dd>Toby</dd>
-                </div>
-                <div>
-                    <dt>Especie</dt>
-                    <dd>Perro</dd>
-                </div>
-                <div>
-                    <dt>Raza</dt>
-                    <dd>-</dd>
-                </div>
-                <div>
-                    <dt>Propietario</dt>
-                    <dd>Ana Morales</dd>
-                </div>
-            </dl>
-
-            <div>
-                <a href="mascotas-listado.html">Confirmar eliminación</a>
-                <a href="mascotas-listado.html">Cancelar</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Historial clínico de Toby</h2>
-
-            <article>
-                <h3>Consulta general</h3>
-                <dl>
-                    <div>
-                        <dt>Servicio</dt>
-                        <dd>Consulta general</dd>
+                    <div class="campo">
+                        <label for="propietario">Propietario</label>
+                        <select name="propietario" id="propietario" required>
+                            <option value="">Seleccione un propietario</option>
+                            <option value="P01">Ana Morales</option>
+                            <option value="P02">Carlos Vega</option>
+                            <option value="P03">Sofía Herrera</option>
+                            <option value="P04">Diego Castillo</option>
+                        </select>
                     </div>
-                    <div>
-                        <dt>Fecha y hora</dt>
-                        <dd>16 de noviembre de 2026, 08:30</dd>
+
+                    <div class="campo">
+                        <label for="observaciones">Observaciones</label>
+                        <textarea name="observaciones" id="observaciones" maxlength="300" cols="30" rows="10" placeholder="Información adicional de la mascota"></textarea>
                     </div>
-                    <div>
-                        <dt>Veterinario</dt>
-                        <dd>Dr. Pablo Andrade</dd>
+
+                    <div class="botones">
+                        <button type="submit" class="boton boton-primario">Guardar</button>
+                        <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
                     </div>
-                    <div>
-                        <dt>Estado de la cita</dt>
-                        <dd>Atendida</dd>
+                </form>
+            </section>
+
+            <!-- ============================================================
+                 BLOQUE 2 · LISTADO (Consultar y buscar)
+                 Buscador + botón de crear arriba, tabla con acciones abajo.
+                 Clases: barra, buscador, tabla-contenedor, tabla, acciones
+                 ============================================================ -->
+            <section>
+                <h2>Mascotas</h2>
+
+                <div class="barra">
+                    <form class="buscador" action="mascotas-listado.html" method="get" role="search">
+                        <label for="buscar-mascota">Buscar por mascota o propietario</label>
+                        <input type="search" id="buscar-mascota" name="q" maxlength="50">
+                        <button type="submit" class="boton boton-secundario">Buscar</button>
+                    </form>
+                    <a class="boton boton-primario" href="mascotas-nueva.html">Nueva mascota</a>
+                </div>
+
+                <div class="tabla-contenedor tarjeta">
+                    <table class="tabla">
+                        <caption>Mascotas registradas</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Especie</th>
+                                <th scope="col">Raza</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Toby</td>
+                                <td>Perro</td>
+                                <td>-</td>
+                                <td>Ana Morales</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Copito</td>
+                                <td>Roedor</td>
+                                <td>-</td>
+                                <td>Ana Morales</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Michi</td>
+                                <td>Gato</td>
+                                <td>-</td>
+                                <td>Carlos Vega</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>Ave</td>
+                                <td>-</td>
+                                <td>Sofía Herrera</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Luna</td>
+                                <td>Perro</td>
+                                <td>-</td>
+                                <td>Diego Castillo</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ============================================================
+                 BLOQUE 3 · DETALLE (Ver detalle)
+                 El registro va en un article; los datos, como texto en una lista dl.
+                 Clases: tarjeta, datos, botones, boton
+                 ============================================================ -->
+            <section>
+                <h2>Ficha de la mascota</h2>
+
+                <article class="tarjeta">
+                    <h3>Toby</h3>
+                    <dl class="datos">
+                        <div>
+                            <dt>Nombre</dt>
+                            <dd>Toby</dd>
+                        </div>
+                        <div>
+                            <dt>Especie</dt>
+                            <dd>Perro</dd>
+                        </div>
+                        <div>
+                            <dt>Raza</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Sexo</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Fecha de nacimiento</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Peso (kg)</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Propietario</dt>
+                            <dd>Ana Morales</dd>
+                        </div>
+                        <div>
+                            <dt>Observaciones</dt>
+                            <dd>-</dd>
+                        </div>
+                    </dl>
+
+                    <div class="botones">
+                        <a class="boton boton-primario" href="citas-nueva.html">Agendar cita</a>
+                        <a class="boton boton-secundario" href="mascotas-editar.html">Editar ficha</a>
+                        <a class="boton boton-secundario" href="historial-clinico.html">Ver historial</a>
                     </div>
-                    <div>
-                        <dt>Diagnóstico</dt>
-                        <dd>-</dd>
-                    </div>
-                    <div>
-                        <dt>Tratamiento</dt>
-                        <dd>-</dd>
-                    </div>
-                    <div>
-                        <dt>Peso registrado (kg)</dt>
-                        <dd>-</dd>
-                    </div>
-                </dl>
-            </article>
-        </section>
+                </article>
+            </section>
+
+            <!-- ============================================================
+                 BLOQUE 4 · CONFIRMAR ELIMINACIÓN (Eliminar)
+                 Muestra el registro y pide confirmar. Confirmar es el botón de un formulario.
+                 Clases: tarjeta, datos, botones, boton-peligro
+                 ============================================================ -->
+            <section>
+                <h2>Confirmar la eliminación</h2>
+
+                <article class="tarjeta">
+                    <h3>¿Eliminar a Toby?</h3>
+                    <p>Esta acción elimina el registro de Toby</p>
+
+                    <dl class="datos">
+                        <div>
+                            <dt>Mascota</dt>
+                            <dd>Toby</dd>
+                        </div>
+                        <div>
+                            <dt>Especie</dt>
+                            <dd>Perro</dd>
+                        </div>
+                        <div>
+                            <dt>Raza</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Propietario</dt>
+                            <dd>Ana Morales</dd>
+                        </div>
+                    </dl>
+
+                    <form class="botones" action="mascotas-listado.html" method="get">
+                        <button type="submit" class="boton boton-peligro">Confirmar eliminación</button>
+                        <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
+                    </form>
+                </article>
+            </section>
+
+            <!-- ============================================================
+                 BLOQUE 5 · HISTORIAL (lista de registros)
+                 Un article por cada atención, de la más reciente a la más antigua.
+                 Clases: tarjeta, datos, estado con data-estado
+                 ============================================================ -->
+            <section>
+                <h2>Historial clínico de Toby</h2>
+
+                <article class="tarjeta">
+                    <h3>Consulta general</h3>
+                    <dl class="datos">
+                        <div>
+                            <dt>Servicio</dt>
+                            <dd>Consulta general</dd>
+                        </div>
+                        <div>
+                            <dt>Fecha y hora</dt>
+                            <dd>16 de noviembre de 2026, 08:30</dd>
+                        </div>
+                        <div>
+                            <dt>Veterinario</dt>
+                            <dd>Dr. Pablo Andrade</dd>
+                        </div>
+                        <div>
+                            <dt>Estado de la cita</dt>
+                            <dd><span class="estado" data-estado="Atendida">Atendida</span></dd>
+                        </div>
+                        <div>
+                            <dt>Diagnóstico</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Tratamiento</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div>
+                            <dt>Peso registrado (kg)</dt>
+                            <dd>-</dd>
+                        </div>
+                    </dl>
+                </article>
+            </section>
+
+            <!-- ============================================================
+                 BLOQUE 6 · MENÚ DE INICIO (recepcion-inicio, veterinario-inicio, admin-inicio)
+                 Una tarjeta-enlace por cada sección del rol.
+                 Clases: tarjetas, tarjeta, tarjeta-menu
+                 ============================================================ -->
+            <section>
+                <h2>Menú de inicio</h2>
+
+                <div class="tarjetas">
+                    <a class="tarjeta tarjeta-menu" href="propietarios-listado.html">
+                        <strong>Propietarios</strong>
+                        <span class="texto-suave">Registrar y consultar dueños</span>
+                    </a>
+                    <a class="tarjeta tarjeta-menu" href="mascotas-listado.html">
+                        <strong>Mascotas</strong>
+                        <span class="texto-suave">Fichas de los pacientes</span>
+                    </a>
+                    <a class="tarjeta tarjeta-menu" href="citas-listado.html">
+                        <strong>Citas</strong>
+                        <span class="texto-suave">Agendar, reprogramar o cancelar</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============================================================
+             PANEL DE AYUDA (aside): va en todas las pantallas, como en la plantilla
+             ============================================================ -->
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Aquí va la ayuda propia de cada pantalla.</p>
+        </aside>
     </main>
 
 </body>

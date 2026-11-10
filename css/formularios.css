@@ -1,0 +1,100 @@
+/* =========================================================
+   VetCare · formularios.css
+   Responsable: Integrante 2 (Bryan Ayala)
+
+   Qué hace: el aspecto de todos los formularios del sistema
+   (crear, editar, agendar cita, registrar atención, cancelar
+   cita, inicio de sesión) y sus estados de validación.
+
+   Reglas:
+   - Solo variables de base.css: var(--color-...), var(--espacio-...),
+     var(--radios-...). Ningún color escrito a mano.
+   - Los botones (.boton, .boton-primario...) y .tarjeta ya
+     están en base.css: aquí no se repiten.
+   - Los @media van al final, con los mismos puntos de quiebre:
+     (min-width: 768px) y (min-width: 1200px).
+
+   Requisitos de la rúbrica que se cubren en esta hoja:
+   - Pseudoclases de validación: :valid, :invalid, :user-invalid,
+     :required y :focus-visible.
+   - Selectores de atributo: input[type="radio"],
+     input[type="checkbox"], [required]...
+   ========================================================= */
+
+
+/* ---------- Contenedor del formulario ----------
+   .formulario
+     El <form>. Se combina con .tarjeta: class="formulario tarjeta".
+     Organiza los campos en columnas con Grid, por ejemplo:
+     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+     En el teléfono queda una sola columna sin necesidad de @media.
+
+   .formulario fieldset / .formulario legend
+     Grupos de campos con su título (por ejemplo "Datos de la mascota").
+*/
+
+
+/* ---------- Cada campo ----------
+   .campo
+     El <div> que envuelve un label + su control (input, select o
+     textarea). Apila la etiqueta arriba y el control abajo.
+
+   .campo label
+     Etiqueta en negrilla, tamaño var(--fs-sm).
+
+   .campo input, .campo select, .campo textarea
+     Ancho completo, alto mínimo var(--alto-control) (48 px),
+     borde var(--color-borde-control), esquinas var(--radios-md).
+
+   .campo textarea
+     Más alto (unas 5 líneas) y que solo se agrande hacia abajo.
+
+   .campo-ancho
+     Opcional: un campo que ocupa todas las columnas
+     (Observaciones, Dirección): grid-column: 1 / -1;
+
+   .ayuda-campo
+     Texto pequeño y suave debajo del control:
+     "10 dígitos, sin guiones".
+*/
+
+
+/* ---------- Grupos de opciones ----------
+   .opciones
+     El <fieldset> de radios o checkboxes (Sexo, Días de atención).
+     Los pone en fila con Flexbox.
+
+   .opciones input[type="radio"], .opciones input[type="checkbox"]
+     Sin ancho completo ni alto de 48 px (si no, se estiran).
+*/
+
+
+/* ---------- Estados de validación ----------
+   .campo input:focus-visible
+     Borde azul var(--color-borde-foco) al entrar en el campo.
+
+   .campo input:user-invalid (también select y textarea)
+     Borde y fondo de error: var(--color-error) y
+     var(--color-error-fondo). Solo aparece después de que el
+     usuario escribe o intenta enviar el formulario.
+
+   .campo input:valid
+     Opcional: borde var(--color-valido) cuando el dato es correcto.
+
+   .mensaje-error
+     Texto rojo debajo del campo. Oculto por defecto y visible solo
+     cuando el campo es inválido, sin JavaScript:
+     .campo :user-invalid ~ .mensaje-error { display: block; }
+     (el mensaje debe ir DESPUÉS del control en el HTML).
+
+   .obligatorio
+     Opcional: una clase en el label de los campos obligatorios
+     para mostrar un asterisco con ::after.
+*/
+
+
+/* ---------- Puntos de quiebre ----------
+   @media (min-width: 768px)  { ... }
+   @media (min-width: 1200px) { ... }
+   Probablemente no hagan falta si las columnas usan auto-fit.
+*/

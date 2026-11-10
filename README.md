@@ -20,12 +20,12 @@ La clínica atiende cerca de 40 mascotas al día con tres veterinarios y una rec
 
 Cada integrante es dueño de un módulo completo: especifica sus casos de uso en el documento, construye sus pantallas, mantiene una hoja de estilos común y lleva un entregable compartido.
 
-| # | Integrante | GitHub | Módulo | Casos de uso | Pantallas | Hoja CSS | Entregable compartido |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | *[Nombre]* | *[usuario]* | Acceso, estructura común y propietarios | CU-01, CU-02 | 9 | `base.css` | Repositorio, GitHub Pages y README |
-| 2 | *[Nombre]* | *[usuario]* | Mascotas y atención clínica | CU-03, CU-07, CU-08 | 7 | `formularios.css` | 3.3 Diagrama de casos de uso |
-| 3 | *[Nombre]* | *[usuario]* | Citas y agenda | CU-04, CU-05, CU-06 | 6 | `componentes.css` | 3.4 Priorización y 3.5 Mapa navegacional |
-| 4 | *[Nombre]* | *[usuario]* | Veterinarios, servicios y documentación | CU-09, CU-10 | 10 | `tablas.css` | 3.1 Visión y PDF final |
+| # | Integrante | Módulo | Casos de uso | Pantallas | Hoja CSS | Entregable compartido |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Juan Chugá | Acceso, estructura común y propietarios | CU-01, CU-02 | 9 | `base.css` | Repositorio, GitHub Pages y README |
+| 2 | Bryan Ayala | Mascotas y atención clínica | CU-03, CU-07, CU-08 | 7 | `formularios.css` | 3.3 Diagrama de casos de uso |
+| 3 | *[Nombre]* | Citas y agenda | CU-04, CU-05, CU-06 | 6 | `componentes.css` | 3.4 Priorización y 3.5 Mapa navegacional |
+| 4 | *[Nombre]* | Veterinarios, servicios y documentación | CU-09, CU-10 | 10 | `tablas.css` | 3.1 Visión y PDF final |
 
 > La nota es grupal, pero el docente puede ajustar la de un integrante si el historial de commits o una revisión oral muestran que no participó. Cada uno sube sus cambios desde su propia cuenta.
 
@@ -140,7 +140,7 @@ Como no hay servidor, cada operación CRUD es una pantalla estática:
 - **Hojas de estilo:** todas las pantallas enlazan las cuatro, en este orden: `base.css`, `formularios.css`, `tablas.css`, `componentes.css`. Cada hoja tiene un dueño; si necesitas un estilo en una hoja ajena, pídeselo a su dueño.
 - **Colores, fuentes y espaciados:** solo con las variables de `:root` (por ejemplo `var(--color-primario)`), nunca escritos a mano.
 - **Formularios:** `method="get"` (GitHub Pages no acepta POST) y `action` hacia la pantalla siguiente del mapa.
-- **Menú:** el enlace de la sección actual lleva `aria-current="page"`.
+- **Menú:** en cada pantalla, el enlace de su sección lleva `class="activo"` (por ejemplo, las cinco pantallas de mascotas marcan "Mascotas").
 - **Enlaces:** cada enlace lleva a una pantalla del mapa; en la entrega no queda ningún `href="#"`.
 - **Carpetas vacías:** Git no las sube. `img/` necesita un archivo (por ejemplo `.gitkeep`) hasta que tenga imágenes.
 
@@ -219,19 +219,20 @@ git push -u origin modulo-propietarios
 | Fecha | Hito |
 | --- | --- |
 | Mié 4 nov | Arranque: repositorio, estructura de carpetas y acuerdos |
-| Jue 5 nov | Estructura común y variables CSS listas |
+| Jue 5 nov | `base.css` y plantilla listas |
 | Sáb 7 nov | Reunión de priorización MoSCoW |
-| Dom 8 nov | Casos de uso, Visión y diagrama UML en borrador |
-| Jue 12 nov | Pantallas *Must* publicadas en GitHub Pages |
-| Vie 13 nov | Mapa navegacional |
-| Lun 16 – mar 17 nov | Cierre: validadores, Chrome y Firefox, revisión cruzada y PDF |
+| Dom 8 nov | Entregables escritos terminados: Visión, casos de uso, diagrama, priorización y mapa navegacional |
+| Lun 9 – mar 10 nov | Hojas CSS de cada módulo: `formularios.css`, `componentes.css` y `tablas.css` |
+| Mié 11 – lun 16 nov | Construcción de pantallas |
+| Sáb 14 nov | Pantallas *Must* publicadas en GitHub Pages |
+| Mar 17 nov | Cierre: validadores, Chrome y Firefox, revisión cruzada, ajuste del mapa y PDF |
 | **Mié 18 nov, 23:59** | **Entrega:** URL del repositorio y del sitio en el aula virtual (una sola entrega por grupo) |
 
 ## Pendiente de definir
 
-- [ ] Nombres y usuarios de GitHub de los integrantes (tabla de reparto)
-- [ ] Estilo visual: paleta y fuentes, que pasan a variables en `base.css`
-- [ ] Estructura común (encabezado, menú por rol, contenido, panel lateral y pie) en `plantilla.html`
+- [ ] Nombres de los integrantes 3 y 4 (tabla de reparto)
+- [x] Estilo visual: paleta y fuentes, en las variables de `base.css`
+- [x] Estructura común (encabezado, menú por rol, contenido y pie) en `plantilla.html`
 - [ ] Priorización MoSCoW final
 - [ ] Relaciones «include» y «extend» del diagrama de casos de uso
 - [ ] Enlaces del repositorio y de GitHub Pages en este README
