@@ -167,7 +167,8 @@ h3 { font-size: var(--fs-base); }
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     gap: var(--espacio-3);
     padding: var(--espacio-3);
     background-color: var(--color-primario);
@@ -190,6 +191,7 @@ h3 { font-size: var(--fs-base); }
     color: var(--color-superficie);
     line-height: var(--interlineado-titulos);
     text-decoration: none;
+    align-items: center;
 }
 
 .logo:hover {
@@ -208,7 +210,11 @@ h3 { font-size: var(--fs-base); }
 
 .usuario {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacio-3);
     font-weight: var(--peso-negrilla);
 }
 
@@ -224,6 +230,7 @@ h3 { font-size: var(--fs-base); }
 
 .menu ul {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: var(--espacio-1);
 }
@@ -266,6 +273,43 @@ h3 { font-size: var(--fs-base); }
 .pagina-encabezado {
     display: grid;
     gap: var(--espacio-1);
+}
+
+.bienvenida {
+    background-image: linear-gradient(90deg, var(--color-primario), hsla(225, 45%, 20%, 0.3)), var(--imagen-bienvenida);
+    background-size: cover;
+    border-radius: var(--radios-lg);
+    padding: var(--espacio-6);
+    animation: aparecer 0.7s ease-out;
+}
+
+.saludo-recepcionista {
+    --imagen-bienvenida: url("../img/imagen_recepcionista.jpg");
+    background-position: 50% 75%;
+}
+
+.saludo-veterinario{
+    --imagen-bienvenida: url("../img/imagen_veterinario.jpg");
+    background-position: 50% 10%;
+}
+
+.saludo-administrador{
+    --imagen-bienvenida: url("../img/imagen_administrador.jpg");
+    background-position: 50% 25%;
+}
+
+.bienvenida h1, 
+.bienvenida p {
+    color: var(--color-superficie);
+}
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .pagina-descripcion {
@@ -351,13 +395,16 @@ body.acceso {
 }
 
 .boton-secundario[data-accion="cerrarsesion"]{
+    min-height: 2.25rem;
+    padding: 0 var(--espacio-3);
+    font-size: var(--fs-sm);
+    border-width: 1px;
     border-color: var(--color-superficie);
-    margin-top: var(--espacio-3);
     color: var(--color-superficie);
 }
 
 .boton-secundario:hover {
-    background-color: var(--color-primario);
+    background-color: var(--color-lateral-bloque);
     color: var(--color-superficie);
 }
 
@@ -427,6 +474,7 @@ body.acceso {
         position: sticky;
         top: 0;
         align-self: start;
+        text-align: left;
         height: 100vh;
         overflow-y: auto;
         flex-direction: column;
@@ -438,15 +486,23 @@ body.acceso {
     }
 
     .logo {
+        align-items: flex-start;
         padding: 0 var(--espacio-2);
     }
 
     .usuario {
         order: 3;
         margin-top: auto;
+        flex-direction: column;
+        align-items: flex-start;
         padding: var(--espacio-3);
         border-radius: var(--radios-lg);
         background-color: var(--color-lateral-bloque);
+    }
+
+    .boton-secundario[data-accion="cerrarsesion"] {
+        border-width: 2px;
+        align-self: stretch;
     }
 
     .menu ul {

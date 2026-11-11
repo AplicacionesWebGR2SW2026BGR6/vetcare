@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetCare</title>
+    <title>VetCare - Inicio</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/formularios.css">
     <link rel="stylesheet" href="../css/tablas.css">
@@ -24,54 +24,47 @@
         </a>
 
         <nav class="menu" aria-label="Menú principal">
-            <!--<p>Menu</p>-->
             <ul>
-                <li><a class="activo" href="recepcion-inicio.html">Inicio</a></li>
-                <li><a href="propietarios-listado.html">Propietarios</a></li>
-                <li><a href="mascotas-listado.html">Mascotas</a></li>
-                <li><a href="citas-listado.html">Citas</a></li>
+                <li><a class="activo" href="admin-inicio.html">Inicio</a></li>
+                <li><a href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a href="servicios-listado.html">Servicios</a></li>
             </ul>
         </nav>
         <div class="usuario">
             <p>
-                <span>María Lopez</span>
-                <span class="usuario-rol">Recepcionista</span>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
             </p>
-            <a class="boton boton-secundario" accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
         </div>
     </header>
 
 
     <main class="contenido">
         <section class="pagina">
-            <header class="pagina-encabezado">
-                <p class="texto-suave texto-pequeno">Recepción</p>
-                <h1>Hola, María</h1>
+            <header class="pagina-encabezado bienvenida saludo-administrador">
+                <p class="texto-suave texto-pequeno">Administración</p>
+                <h1>Hola, Jorge</h1>
                 <p class="pagina-descripcion">Miércoles, 18 de noviembre de 2026</p>
             </header>
 
             <div class="tarjetas">
                 <a class="tarjeta tarjeta-menu" href="propietarios-listado.html">
-                    <span class="numero">4</span>
-                    <strong>Propietarios</strong>
-                    <span class="texto-suave">Registrar y consultar dueños</span>
+                    <span class="numero">3</span>
+                    <strong>Veterinarios</strong>
+                    <span class="texto-suave">Personal médico y sus horarios</span>
                 </a>
                 <a class="tarjeta tarjeta-menu" href="mascotas-listado.html">
                     <span class="numero">5</span>
-                    <strong>Mascotas</strong>
-                    <span class="texto-suave">Fichas de los pacientes</span>
-                </a>
-                <a class="tarjeta tarjeta-menu" href="citas-listado.html">
-                   <span class="numero">2 hoy</span>
-                    <strong>Citas</strong>
-                    <span class="texto-suave">Agendar, reprogramar o cancelar</span>
+                    <strong>Servicios</strong>
+                    <span class="texto-suave">Catálogo y precios</span>
                 </a>
             </div>
         </section>
 
          <aside class="ayuda tarjeta">
             <h2>Ayuda</h2>
-            <p class="texto-suave texto-pequeno">Elige una sección para empezar. Los números muestran cuántos propietarios y mascotas hay registrados, y cuántas citas tienes para hoy. Para salir, usa «Cerrar sesión» en la parte superior.</p>
+            <p class="texto-suave texto-pequeno">Elige una sección para empezar. Los números muestran cuántos veterinarios y servicios hay registrados. Para salir, usa «Cerrar sesión».</p>
         </aside>
 
     </main>
