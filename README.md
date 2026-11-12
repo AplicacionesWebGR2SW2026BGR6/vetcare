@@ -1,4 +1,4 @@
-# VetCare
+# VetCare - Proyecto Aplicaciones Web 6to Semestre
 
 Sistema web de gestión de citas y pacientes para la clínica veterinaria **"Huellitas"** de Quito.
 
