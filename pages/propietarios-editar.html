@@ -51,57 +51,57 @@
                                               correo electrónico y teléfono. </p>
             </header>
 
-            <div>
-               <article>
-                   <form class="formulario tarjeta" action="propietarios-listado.html" method="get">
-                        <h2>Datos del propietario</h2>
-                        <div class="campo">
-                            <label for="nombres">Nombres</label>
-                            <input type="text" value="Ana Sofía" id="nombres" name="nombres" required minlength="2" maxlength="50"
-                            pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
-                            autocomplete="given-name" placeholder="Emilio Alejandro">
-                        </div>
-                        <div class="campo">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" value="Morales Zambrano" id="apellidos" name="apellidos" required minlength="2" maxlength="50"
-                            pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
-                            autocomplete="given-name" placeholder="Camino Peña">
-                        </div>
-                        <div class="campo">
-                            <label for="cedula">Cédula</label>
-                            <input type="text" value="1723456789" id="cedula" name="cedula" required minlength="10" maxlength="10"
-                            pattern="[0-9]{10}" title="Diez números", autocomplete="off", placeholder="0123456789">
-                        </div>
-                        <div class="campo">
-                            <label for="celular">Celular</label>
-                            <input type="tel" value="0991234567" id="celular" name="celular" required minlength="10" maxlength="10"
-                            pattern="09[0-9]{8}" title="Diez números, empieza con 09" autocomplete="tel" placeholder=”0987654321”>
-                        </div>
-                        <div class="campo">
-                            <label for="correo">Correo electrónico</label>
-                            <input type="email" value="ana.morales@ejemplo.com" id="correo" name="correo" required minlength="2" maxlength="40"
-                            autocomplete="email" placeholder="coreo.ejemplo@gmail.com">
-                        </div>
-                        <div class="campo">
-                            <label for="contacto">Contacto preferido</label>
-                            <select name="contacto" id="contacto" required>
-                                <option selected ="celular">Celular</option>
-                                <option value="correo">Correo electrónico</option>
-                            </select>
-                        </div>
-                        <div class="campo">
-                            <label for="direccion">Dirección</label>
-                            <input type="text" value="Av. 10 de Agosto y Colón, Quito" id="direccion" name="direccion" required minlength="2" maxlength="150"
-                            autocomplete="street-address" placeholder="Av. La Mañosca y América">
-                        </div>
+            <article>
+                <form class="formulario tarjeta" action="propietarios-listado.html" method="get">
+                    <h2>Datos del propietario</h2>
+                    <div class="campo">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" value="Ana Sofía" id="nombres" name="nombres" required minlength="2" maxlength="50"
+                        pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
+                        autocomplete="given-name" placeholder="Emilio Alejandro">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" value="Morales Zambrano" id="apellidos" name="apellidos" required minlength="2" maxlength="50"
+                        pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
+                        autocomplete="given-name" placeholder="Camino Peña">
+                    </div>
+                    <div class="campo">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" value="1723456789" id="cedula" name="cedula" required minlength="10" maxlength="10"
+                        pattern="[0-9]{10}" title="Diez números", autocomplete="off", placeholder="0123456789">
+                        <span class="texto-pequeno">10 dígitos, sin guiones</span>
+                    </div>
+                    <div class="campo">
+                        <label for="celular">Celular</label>
+                        <input type="tel" value="0991234567" id="celular" name="celular" required minlength="10" maxlength="10"
+                        pattern="09[0-9]{8}" title="Diez números, empieza con 09" autocomplete="tel" placeholder=”0987654321”>
+                        <span class="texto-pequeno">10 dígitos, empieza en 09</span>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" value="ana.morales@ejemplo.com" id="correo" name="correo" required minlength="2" maxlength="40"
+                        autocomplete="email" placeholder="coreo.ejemplo@gmail.com">
+                    </div>
+                    <div class="campo">
+                        <label for="contacto">Contacto preferido</label>
+                        <select name="contacto" id="contacto" required>
+                            <option selected ="celular">Celular</option>
+                            <option value="correo">Correo electrónico</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" value="Av. 10 de Agosto y Colón, Quito" id="direccion" name="direccion" required minlength="2" maxlength="150"
+                        autocomplete="street-address" placeholder="Av. La Mañosca y América, Quito">
+                    </div>
 
-                        <div class="botones">
-                            <button type="submit" class="boton boton-primario">Guardar</button>
-                            <a class="boton boton-secundario" href="propietarios-listado.html">Cancelar</a>
-                        </div>
-                    </form>
-               </article>
-            </div>
+                    <div class="botones">
+                        <button type="submit" class="boton boton-primario">Guardar</button>
+                        <a class="boton boton-secundario" href="propietarios-listado.html">Cancelar</a>
+                    </div>
+                </form>
+            </article>
         </section>
 
          <aside class="ayuda tarjeta">

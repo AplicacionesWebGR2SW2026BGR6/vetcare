@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Propietarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="recepcion-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="recepcion-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="propietarios-listado.html">Propietarios</a></li>
+                <li><a href="mascotas-listado.html">Mascotas</a></li>
+                <li><a href="citas-listado.html">Citas</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>María López</span>
+                <span class="usuario-rol">Recepcionista</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Recepción/Propietarios/Detalle</p>
+                <h1>Detalle del propietario</h1>
+                <p class="pagina-descripcion">Revisa los datos del propietario y sus mascotas.</p>
+            </header>
+
+            <article class="tarjeta">
+                <h2>Ana Sofía Morales Zambrano</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>CÉDULA</dt>
+                        <dd>1723456789</dd>
+                    </div>
+                    <div>
+                        <dt>CELULAR</dt>
+                        <dd>0991234567</dd>
+                    </div>
+                    <div>
+                        <dt>CORREO ELECTRÓNICO</dt>
+                        <dd>ana.morales@ejemplo.com</dd>
+                    </div>
+                    <div>
+                        <dt>DIRECCIÓN</dt>
+                        <dd>Av. 10 de Agosto y Colón, Quito</dd>
+                    </div>
+                    <div>
+                        <dt>CONTACTO PREFERIDO</dt>
+                        <dd>Celular</dd>
+                    </div>
+                </dl>
+                <table class="tabla">
+                    <caption>Mascotas registradas</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Mascota</th>
+                            <th scope="col">Especie</th>
+                            <th scope="col">Raza</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Toby</td>
+                            <td>Perro</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Copito</td>
+                            <td>Roedor</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="botones">
+                    <a class="boton boton-primario" href="propietarios-editar.html">Editar</a>
+                    <a class="boton boton-peligro" href="propietarios-eliminar.html">Eliminar</a>
+                    <a class="boton boton-secundario" href="propietarios-listado.html">Volver al listado</a>
+                </div>
+            </article>
+        </section>
+
+         <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Desde aquí puedes editar o eliminar el propietario, o saltar a la ficha de sus mascotas.</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
