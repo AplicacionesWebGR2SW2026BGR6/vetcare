@@ -44,68 +44,48 @@
     <main class="contenido">
         <section class="pagina">
             <header class="pagina-encabezado">
-                <p class="texto-suave texto-pequeno">Recepción/Propietarios/Detalle</p>
-                <h1>Detalle del propietario</h1>
-                <p class="pagina-descripcion">Revisa los datos del propietario y sus mascotas.</p>
+                <p class="texto-suave texto-pequeno">Recepción/Propietarios/Eliminar</p>
+                <h1>Eliminar propietario</h1>
+                <p class="pagina-descripcion">Revisa los datos antes de confirmar la eliminación.</p>
             </header>
 
             <article class="tarjeta">
-                <h2>Ana Sofía Morales Zambrano</h2>
+                <h2>¿Eliminar a Emilio Adrián Camino Peña?</h2>
+                <p class="aviso">Esta acción no se puede deshacer</p>
+
                 <dl class="datos">
                     <div>
-                        <dt>CÉDULA</dt>
-                        <dd>1723456789</dd>
+                        <dt>Cédula</dt>
+                        <dd>1098765432</dd>
                     </div>
                     <div>
-                        <dt>CELULAR</dt>
-                        <dd>0991234567</dd>
+                        <dt>Celular</dt>
+                        <dd>0987654321</dd>
                     </div>
                     <div>
-                        <dt>CORREO ELECTRÓNICO</dt>
-                        <dd>ana.morales@ejemplo.com</dd>
+                        <dt>Correo electrónico</dt>
+                        <dd>emilio.camino@ejemplo.com</dd>
                     </div>
                     <div>
-                        <dt>DIRECCIÓN</dt>
-                        <dd>Av. 10 de Agosto y Colón, Quito</dd>
+                        <dt>Dirección</dt>
+                        <dd>Av. Francisco de Orellana y Coruña, Quito</dd>
                     </div>
                     <div>
-                        <dt>CONTACTO PREFERIDO</dt>
-                        <dd>Celular</dd>
+                        <dt>Mascotas</dt>
+                        <dd>Ninguna</dd>
                     </div>
                 </dl>
-                <table class="tabla">
-                    <caption>Mascotas registradas</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Mascota</th>
-                            <th scope="col">Especie</th>
-                            <th scope="col">Raza</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Toby</td>
-                            <td>Perro</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Copito</td>
-                            <td>Roedor</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="botones">
-                    <a class="boton boton-primario" href="propietarios-editar.html">Editar</a>
-                    <a class="boton boton-peligro" href="propietarios-eliminar.html">Eliminar</a>
-                    <a class="boton boton-secundario" href="propietarios-listado.html">Volver al listado</a>
-                </div>
+
+                <form class="botones" action="mascotas-listado.html" method="get">
+                    <button type="submit" class="boton boton-peligro">Confirmar</button>
+                    <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
+                </form>
             </article>
         </section>
 
          <aside class="ayuda tarjeta">
             <h2>Ayuda</h2>
-            <p class="texto-suave texto-pequeno">Desde aquí puedes editar o eliminar el propietario, o saltar a la ficha de sus mascotas.</p>
+            <p class="texto-suave texto-pequeno">Recuerda que un propietario con mascotas o citas registradas no se puede eliminar.</p>
         </aside>
 
     </main>
