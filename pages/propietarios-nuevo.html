@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Propietarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="recepcion-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="recepcion-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="propietarios-listado.html">Propietarios</a></li>
+                <li><a href="mascotas-listado.html">Mascotas</a></li>
+                <li><a href="citas-listado.html">Citas</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>María López</span>
+                <span class="usuario-rol">Recepcionista</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Recepción/Propietarios/Nuevo</p>
+                <h1>Nuevo propietario</h1>
+                <p class="pagina-descripcion">Completa los datos del dueño de la mascota. 
+                                              No olvides tomar en cuenta el formato de la cédula,
+                                              correo electrónico y teléfono. </p>
+            </header>
+
+            <article>
+                <form class="formulario tarjeta" action="propietarios-listado.html" method="get">
+                    <h2>Datos del propietario</h2>
+                    <div class="campo">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" required minlength="2" maxlength="50"
+                        pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
+                        autocomplete="given-name" placeholder="Emilio Alejandro">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="50"
+                        pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Nombre entre 2 y 50 caracteres, solo letras y espacios" 
+                        autocomplete="given-name" placeholder="Camino Peña">
+                    </div>
+                    <div class="campo">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" id="cedula" name="cedula" required minlength="10" maxlength="10"
+                        pattern="[0-9]{10}" title="Diez números", autocomplete="off", placeholder="0123456789">
+                        <span class="texto-pequeno">10 dígitos, sin guiones</span>
+                    </div>
+                    <div class="campo">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" required minlength="10" maxlength="10"
+                        pattern="09[0-9]{8}" title="Diez números, empieza con 09" autocomplete="tel" placeholder=”0987654321”>
+                        <span class="texto-pequeno">10 dígitos, empieza en 09</span>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required minlength="2" maxlength="40"
+                        autocomplete="email" placeholder="coreo.ejemplo@gmail.com">
+                    </div>
+                    <div class="campo">
+                        <label for="contacto">Contacto preferido</label>
+                        <select name="contacto" id="contacto" required>
+                            <option value="celular">Celular</option>
+                            <option value="correo">Correo electrónico</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" required minlength="2" maxlength="150"
+                        autocomplete="street-address" placeholder="Av. La Mañosca y América, Quito">
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="boton boton-primario">Guardar</button>
+                        <a class="boton boton-secundario" href="propietarios-listado.html">Cancelar</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+
+         <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno linea">Llena los campos para registrar un nuevo propietario. 
+                No olvides que: la cédula y el celular tienen 10 dígitos, y el celular empieza en "09". 
+                Además, los nombres y apellidos tienen un máximo de 50 caracteres, y la dirección un limite de 150.</p>
+            <p class="texto-suave texto-pequeno">Para aceptar los cambios, usa «Guardar», y para descartar los cambios, «Cancelar».</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
