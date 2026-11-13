@@ -54,7 +54,11 @@
                 <div class="barra">
                     <form class="buscador" action="propietarios-listado.html" method="get" role="search">
                         <label class="oculto-visual" for="buscar-propietario">Buscar por nombre o cédula del propietario</label>
-                        <input type="search" id="buscar-propietario" name="buscar-propietario" maxlength="50" placeholder="Busca por nombre o cédula del propietario.">
+                        <input type="search" id="buscar-propietario" name="buscar-propietario" maxlength="50" 
+                            maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]+|[0-9]{1,10}"
+                            title="Escribe un nombre (solo letras) o una cédula (solo números, hasta 10)."         
+                            placeholder="Busca por nombre o cédula del propietario.">
                         <button type="submit" class="boton boton-secundario">Buscar</button>
                     </form>
                     <a class="boton boton-primario" href="propietarios-nuevo.html">Nuevo propietario</a>
@@ -136,7 +140,7 @@
 
          <aside class="ayuda tarjeta">
             <h2>Ayuda</h2>
-            <p class="texto-suave texto-pequeno">Desde aquí puedes editar o eliminar el propietario, o saltar a la ficha de sus mascotas.</p>
+            <p class="texto-suave texto-pequeno">Escribe un nombre o cédula en el buscador para filtrar el listado.</p>
         </aside>
 
     </main>
