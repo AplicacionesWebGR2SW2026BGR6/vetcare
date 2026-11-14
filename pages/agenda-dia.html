@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda del día · VetCare</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body class="agenda-dia">
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="veterinario-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare">
+            </div>
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="veterinario-inicio.html">Inicio</a></li>
+                <li><a class="activo" aria-current="page" href="agenda-dia.html">Agenda del día</a></li>
+                <li><a href="historial-clinico.html">Historial clínico</a></li>
+            </ul>
+        </nav>
+
+        <div class="usuario">
+            <p>
+                <span>Dra. Valeria Ruiz</span>
+                <span class="usuario-rol">Veterinaria</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenido" id="contenido">
+        <section class="pagina citas-listado" aria-labelledby="titulo-pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Veterinario / Agenda</p>
+                <h1 id="titulo-pagina">Agenda del día</h1>
+                <p class="pagina-descripcion">
+                    <time datetime="2026-11-18">Miércoles 18 de noviembre de 2026</time> · Dra. Valeria Ruiz
+                </p>
+            </header>
+
+            <article class="listado-citas" aria-labelledby="titulo-tabla">
+                <div class="tabla-contenedor tarjeta" role="region" aria-label="Tabla de citas de hoy" tabindex="0">
+                    <table class="tabla">
+                        <caption id="titulo-tabla">Citas de hoy</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <time datetime="2026-11-18T08:00">08:00</time>
+                                    <span class="oculto-visual"> — cita C04</span>
+                                </th>
+                                <td>Luna</td>
+                                <td>Diego del Carmen Castillo Castro</td>
+                                <td>Control posoperatorio</td>
+                                <td><span class="estado" data-estado="Programada">Programada</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <a href="atencion-registrar.html" aria-label="Atender la cita C04 de Luna">Atender</a>
+                                        <a href="historial-clinico.html" aria-label="Ver historial clínico de Luna">Ver historial</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Pulsa Atender para registrar el diagnóstico y el tratamiento.</p>
+        </aside>
+    </main>
+
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+</body>
+</html>

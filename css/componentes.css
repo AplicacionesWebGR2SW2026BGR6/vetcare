@@ -101,3 +101,381 @@
    @media (min-width: 768px)  { ... }
    @media (min-width: 1200px) { ... }
 */
+
+
+/* Listado de citas */
+.citas-listado .listado-citas {
+    display: grid;
+    gap: var(--espacio-4);
+    min-width: 0;
+}
+
+.citas-listado .barra {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espacio-3);
+}
+
+.citas-listado .buscador {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--espacio-2);
+}
+
+.citas-listado .buscador input[type="search"] {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: var(--alto-control);
+    padding: 0 var(--espacio-3);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radios-completo);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+}
+
+.citas-listado .buscador input[type="search"]::placeholder {
+    color: var(--color-texto-suave);
+}
+
+.citas-listado .tabla-contenedor {
+    min-width: 0;
+    overflow-x: auto;
+    padding: 0;
+}
+
+.citas-listado .tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+}
+
+.citas-listado .tabla caption {
+    padding: var(--espacio-4) var(--espacio-4) var(--espacio-2);
+    text-align: left;
+    font-size: var(--fs-lg);
+    font-weight: var(--peso-titulo);
+}
+
+.citas-listado .tabla th,
+.citas-listado .tabla td {
+    padding: var(--espacio-3) var(--espacio-2);
+    text-align: left;
+    vertical-align: top;
+}
+
+.citas-listado .tabla th:first-child,
+.citas-listado .tabla td:first-child {
+    padding-left: var(--espacio-4);
+}
+
+.citas-listado .tabla th:last-child,
+.citas-listado .tabla td:last-child {
+    padding-right: var(--espacio-4);
+}
+
+.citas-listado .tabla thead th {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-negrilla);
+    text-transform: uppercase;
+}
+
+.citas-listado .tabla tbody th,
+.citas-listado .tabla tbody td {
+    border-top: 1px solid var(--color-borde);
+}
+
+.citas-listado .tabla tbody tr:nth-child(even) {
+    background-color: var(--color-fila-alterna);
+}
+
+.citas-listado .tabla time {
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-listado .cita-id {
+    display: block;
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-regular);
+}
+
+.citas-listado .estado {
+    display: inline-block;
+    padding: var(--espacio-1) var(--espacio-2);
+    border-radius: var(--radios-completo);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-negrilla);
+    white-space: nowrap;
+}
+
+.citas-listado .estado[data-estado="Programada"] {
+    background-color: var(--color-informacion-fondo);
+    color: var(--color-informacion-texto);
+}
+
+.citas-listado .estado[data-estado="Atendida"] {
+    background-color: var(--color-valido-fondo);
+    color: var(--color-valido-texto);
+}
+
+.citas-listado .estado[data-estado="Cancelada"] {
+    background-color: var(--color-error-fondo);
+    color: var(--color-error-texto);
+}
+
+.citas-listado .acciones {
+    display: grid;
+    gap: var(--espacio-1);
+}
+
+.citas-listado .acciones a {
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-listado .consulta-cita summary {
+    list-style: none;
+    color: var(--color-primario);
+    font-weight: var(--peso-negrilla);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.citas-listado .consulta-cita summary::-webkit-details-marker {
+    display: none;
+}
+
+.citas-listado .consulta-cita summary:hover {
+    color: var(--color-primario-hover);
+}
+
+.citas-listado .consulta-cita-datos {
+    width: 12rem;
+    padding-top: var(--espacio-2);
+    overflow-wrap: anywhere;
+}
+
+.citas-listado .consulta-cita-titulo {
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-listado .consulta-cita-datos dl {
+    display: grid;
+    gap: var(--espacio-2);
+    margin-top: var(--espacio-2);
+}
+
+.citas-listado .consulta-cita-datos dt {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+}
+
+.citas-listado .accion-limitada {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+}
+
+
+
+
+/* Detalle de cita */
+.citas-detalle .ficha-cita {
+    display: grid;
+    gap: var(--espacio-4);
+}
+
+.citas-detalle .ficha-encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--espacio-2);
+}
+
+.citas-detalle .codigo-cita {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-detalle .datos {
+    display: grid;
+    gap: var(--espacio-3) var(--espacio-4);
+}
+
+.citas-detalle .datos > div {
+    min-width: 0;
+}
+
+.citas-detalle .datos dt {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+}
+
+.citas-detalle .datos dd {
+    margin-top: var(--espacio-1);
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-detalle .estado {
+    display: inline-block;
+    padding: var(--espacio-1) var(--espacio-2);
+    border-radius: var(--radios-completo);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-negrilla);
+    white-space: nowrap;
+}
+
+.citas-detalle .estado[data-estado="Programada"] {
+    background-color: var(--color-informacion-fondo);
+    color: var(--color-informacion-texto);
+}
+
+
+
+
+/* Formulario de nueva cita */
+.citas-nueva .formulario {
+    display: grid;
+    gap: var(--espacio-4);
+}
+
+.citas-nueva .grupo-cita {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.citas-nueva .grupo-cita legend {
+    margin-bottom: var(--espacio-3);
+    font-size: var(--fs-lg);
+    font-weight: var(--peso-titulo);
+}
+
+.citas-nueva .campos-cita {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--espacio-3) var(--espacio-4);
+}
+
+.citas-nueva .campo {
+    display: grid;
+    align-content: start;
+    gap: var(--espacio-1);
+    min-width: 0;
+}
+
+.citas-nueva .campo label {
+    font-size: var(--fs-sm);
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-nueva .campo select,
+.citas-nueva .campo input {
+    width: 100%;
+    min-width: 0;
+    min-height: var(--alto-control);
+    padding: var(--espacio-2) var(--espacio-3);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radios-md);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+}
+
+.citas-nueva .campo select:focus-visible,
+.citas-nueva .campo input:focus-visible {
+    border-color: var(--color-borde-foco);
+}
+
+.citas-nueva .ayuda-campo {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+}
+
+.citas-nueva .campo :user-invalid {
+    border-color: var(--color-error);
+    background-color: var(--color-error-fondo);
+}
+
+.citas-nueva .mensaje-error {
+    display: none;
+    color: var(--color-error-texto);
+    font-size: var(--fs-xs);
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-nueva input[type="time"]:user-invalid ~ .mensaje-error {
+    display: block;
+}
+
+/* Los datos originales conservan el aspecto de los desplegables. */
+.citas-reprogramar .campo select:disabled {
+    opacity: 1;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    cursor: default;
+}
+
+/* Confirmación de cancelación */
+.citas-cancelar .formulario {
+    display: grid;
+    gap: var(--espacio-4);
+}
+
+.citas-cancelar .campo {
+    display: grid;
+    gap: var(--espacio-1);
+    min-width: 0;
+}
+
+.citas-cancelar .campo label {
+    font-size: var(--fs-sm);
+    font-weight: var(--peso-negrilla);
+}
+
+.citas-cancelar .campo textarea {
+    width: 100%;
+    min-height: calc(var(--alto-control) * 2);
+    padding: var(--espacio-2) var(--espacio-3);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radios-md);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+    resize: vertical;
+}
+
+.citas-cancelar .campo textarea::placeholder {
+    color: var(--color-texto-suave);
+}
+
+.citas-cancelar .campo textarea:focus-visible {
+    border-color: var(--color-borde-foco);
+}
+
+.citas-cancelar .campo textarea:user-invalid {
+    border-color: var(--color-error);
+    background-color: var(--color-error-fondo);
+}
+
+.citas-cancelar .ayuda-campo {
+    color: var(--color-texto-suave);
+    font-size: var(--fs-xs);
+}
+
+
+
+@media (min-width: 768px) {
+    .citas-detalle .datos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
