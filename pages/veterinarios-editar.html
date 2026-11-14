@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Veterinarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Veterinarios/Editar</p>
+                <h1>Editar veterinario</h1>
+                <p class="pagina-descripcion">Edita los datos del veterinario. No olvides tomar en cuenta el formato de la cédula, el celular y el correo electrónico.</p>
+            </header>
+
+            <article>
+                <form class="formulario tarjeta" action="veterinarios-listado.html" method="get">
+                    <h2>Datos del veterinario</h2>
+
+                    <div class="campo">
+                        <label for="trato">Trato</label>
+                        <select id="trato" name="trato" required>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Dra." selected>Dra.</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" value="Lucía" id="nombres" name="nombres" required minlength="2" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Solo letras y espacios"
+                            autocomplete="given-name" placeholder="Pablo">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" value="Paredes" id="apellidos" name="apellidos" required minlength="2" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Solo letras y espacios"
+                            autocomplete="family-name" placeholder="Andrade">
+                    </div>
+                    <div class="campo">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" value="1718765432" id="cedula" name="cedula" required maxlength="10"
+                            pattern="[0-9]{10}" title="10 dígitos numéricos"
+                            autocomplete="off" placeholder="0123456789">
+                        <span class="texto-pequeno">10 dígitos, sin guiones</span>
+                    </div>
+                    <div class="campo">
+                        <label for="celular">Celular</label>
+                        <input type="tel" value="0991112233" id="celular" name="celular" required maxlength="10"
+                            pattern="09[0-9]{8}" title="10 dígitos que empiezan con 09"
+                            autocomplete="tel" placeholder="0987654321">
+                        <span class="texto-pequeno">10 dígitos, empieza en 09</span>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" value="lucia.paredes@huellitas.com" id="correo" name="correo" required maxlength="40"
+                            autocomplete="email" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="campo">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" value="Dermatología" id="especialidad" name="especialidad" list="lista-especialidades" required
+                            minlength="2" maxlength="50" autocomplete="off" placeholder="Medicina general">
+                        <datalist id="lista-especialidades">
+                            <option value="Medicina general">
+                            <option value="Dermatología">
+                            <option value="Cirugía">
+                            <option value="Cardiología">
+                            <option value="Odontología">
+                        </datalist>
+                    </div>
+
+                    <fieldset class="opciones">
+                        <legend>Días de atención</legend>
+                        <label><input type="checkbox" name="dias" value="lunes" checked> Lunes</label>
+                        <label><input type="checkbox" name="dias" value="martes"> Martes</label>
+                        <label><input type="checkbox" name="dias" value="miercoles" checked> Miércoles</label>
+                        <label><input type="checkbox" name="dias" value="jueves"> Jueves</label>
+                        <label><input type="checkbox" name="dias" value="viernes" checked> Viernes</label>
+                        <label><input type="checkbox" name="dias" value="sabado" checked> Sábado</label>
+                    </fieldset>
+
+                    <div class="botones">
+                        <button type="submit" class="boton boton-primario">Guardar</button>
+                        <a class="boton boton-secundario" href="veterinarios-listado.html">Cancelar</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Cambia los campos para editar al veterinario. No olvides que la cédula y el celular tienen 10 dígitos, y el celular empieza en "09". Los nombres y apellidos tienen un máximo de 50 caracteres.</p>
+            <p class="texto-suave texto-pequeno">Para aceptar los cambios, usa «Guardar», y para descartarlos, «Cancelar».</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
