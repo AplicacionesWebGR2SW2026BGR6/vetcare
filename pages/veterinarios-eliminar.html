@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Veterinarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Veterinarios/Eliminar</p>
+                <h1>Eliminar veterinario</h1>
+                <p class="pagina-descripcion">Revisa los datos antes de confirmar la eliminación.</p>
+            </header>
+
+            <article class="tarjeta">
+                <h2>¿Eliminar a la Dra. Valeria Ruiz?</h2>
+                <p class="aviso">Esta acción no se puede deshacer</p>
+
+                <dl class="datos">
+                    <div>
+                        <dt>Cédula</dt>
+                        <dd>1704455667</dd>
+                    </div>
+                    <div>
+                        <dt>Celular</dt>
+                        <dd>0979998877</dd>
+                    </div>
+                    <div>
+                        <dt>Correo electrónico</dt>
+                        <dd>valeria.ruiz@huellitas.com</dd>
+                    </div>
+                    <div>
+                        <dt>Especialidad</dt>
+                        <dd>Cirugía</dd>
+                    </div>
+                    <div>
+                        <dt>Días de atención</dt>
+                        <dd>Martes, jueves y sábado</dd>
+                    </div>
+                </dl>
+
+                <form class="botones" action="veterinarios-listado.html" method="get">
+                    <button type="submit" class="boton boton-peligro">Confirmar</button>
+                    <a class="boton boton-secundario" href="veterinarios-listado.html">Cancelar</a>
+                </form>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Recuerda que un veterinario con citas programadas no se puede eliminar.</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
