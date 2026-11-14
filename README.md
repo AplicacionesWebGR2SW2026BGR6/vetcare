@@ -24,8 +24,8 @@ Cada integrante es dueño de un módulo completo: especifica sus casos de uso en
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Juan Chugá | Acceso, estructura común y propietarios | CU-01, CU-02 | 9 | `base.css` | Repositorio, GitHub Pages y README |
 | 2 | Bryan Ayala | Mascotas y atención clínica | CU-03, CU-07, CU-08 | 7 | `formularios.css` | 3.3 Diagrama de casos de uso |
-| 3 | Eliana Pinargote | Citas y agenda | CU-04, CU-05, CU-06 | 6 | `componentes.css` | 3.4 Priorización y 3.5 Mapa navegacional |
-| 4 | Lenin Jeréz | Veterinarios, servicios y documentación | CU-09, CU-10 | 10 | `tablas.css` | 3.1 Visión y PDF final |
+| 3 | Lenin Jeréz | Citas y agenda | CU-04, CU-05, CU-06 | 6 | `componentes.css` | 3.4 Priorización y 3.5 Mapa navegacional |
+| 4 | Eliana Pinargote | Veterinarios, servicios y documentación | CU-09, CU-10 | 10 | `tablas.css` | 3.1 Visión y PDF final |
 
 > La nota es grupal, pero el docente puede ajustar la de un integrante si el historial de commits o una revisión oral muestran que no participó. Cada uno sube sus cambios desde su propia cuenta.
 
