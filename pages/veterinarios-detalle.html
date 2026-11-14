@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Veterinarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Veterinarios/Detalle</p>
+                <h1>Detalle del veterinario</h1>
+                <p class="pagina-descripcion">Revisa los datos del veterinario y sus días de atención.</p>
+            </header>
+
+            <article class="tarjeta">
+                <h2>Dr. Pablo Andrade</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>Cédula</dt>
+                        <dd>1712345670</dd>
+                    </div>
+                    <div>
+                        <dt>Celular</dt>
+                        <dd>0984561230</dd>
+                    </div>
+                    <div>
+                        <dt>Correo electrónico</dt>
+                        <dd>pablo.andrade@huellitas.com</dd>
+                    </div>
+                    <div>
+                        <dt>Especialidad</dt>
+                        <dd>Medicina general</dd>
+                    </div>
+                    <div>
+                        <dt>Días de atención</dt>
+                        <dd>Lunes a viernes</dd>
+                    </div>
+                    <div>
+                        <dt>Citas</dt>
+                        <dd>2</dd>
+                    </div>
+                </dl>
+                <div class="botones">
+                    <a class="boton boton-primario" href="veterinarios-editar.html">Editar</a>
+                    <a class="boton boton-peligro" href="veterinarios-eliminar.html">Eliminar</a>
+                    <a class="boton boton-secundario" href="veterinarios-listado.html">Volver al listado</a>
+                </div>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Desde aquí puedes editar o eliminar al veterinario, o volver al listado.</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
