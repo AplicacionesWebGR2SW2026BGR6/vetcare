@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Servicios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a class="activo" href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Servicios</p>
+                <h1>Servicios</h1>
+                <p class="pagina-descripcion">Busca, registra y edita los servicios y precios de la clínica.</p>
+            </header>
+
+            <article>
+                <div class="barra">
+                    <form class="buscador" action="servicios-listado.html" method="get" role="search">
+                        <label class="oculto-visual" for="buscar-servicio">Buscar servicio por nombre</label>
+                        <input type="search" id="buscar-servicio" name="buscar-servicio" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]+"
+                            title="Escribe el nombre del servicio (solo letras)."
+                            placeholder="Busca por nombre del servicio">
+                        <button type="submit" class="boton boton-secundario">Buscar</button>
+                    </form>
+                    <a class="boton boton-primario" href="servicios-nuevo.html">Nuevo servicio</a>
+                </div>
+
+                <div class="tabla-contenedor tarjeta">
+                    <table class="tabla">
+                        <caption>Servicios registrados</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Consulta general</td>
+                                <td>Revisión completa de la mascota</td>
+                                <td>$15,00</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vacunación</td>
+                                <td>Aplicación de vacunas según la edad</td>
+                                <td>$20,00</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Desparasitación</td>
+                                <td>Tratamiento interno y externo</td>
+                                <td>$12,50</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Baño y corte</td>
+                                <td>Baño, secado y corte de pelo</td>
+                                <td>$25,00</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Control posoperatorio</td>
+                                <td>Revisión después de una cirugía</td>
+                                <td>$18,00</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Limpieza dental</td>
+                                <td>Limpieza de sarro y revisión de encías</td>
+                                <td>$45,00</td>
+                                <td class="acciones">
+                                    <a href="servicios-detalle.html">Ver</a>
+                                    <a href="servicios-editar.html">Editar</a>
+                                    <a href="servicios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Escribe el nombre de un servicio en el buscador para filtrar el listado.</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>

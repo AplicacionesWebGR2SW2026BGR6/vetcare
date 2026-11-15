@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Veterinarios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a class="activo" href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Veterinarios</p>
+                <h1>Veterinarios</h1>
+                <p class="pagina-descripcion">Busca, registra y edita al personal médico de la clínica.</p>
+            </header>
+
+            <article>
+                <div class="barra">
+                    <form class="buscador" action="veterinarios-listado.html" method="get" role="search">
+                        <label class="oculto-visual" for="buscar-veterinario">Buscar veterinario por nombre o especialidad</label>
+                        <input type="search" id="buscar-veterinario" name="buscar-veterinario" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]+"
+                            title="Escribe un nombre o una especialidad (solo letras)."
+                            placeholder="Busca por nombre o especialidad">
+                        <button type="submit" class="boton boton-secundario">Buscar</button>
+                    </form>
+                    <a class="boton boton-primario" href="veterinarios-nuevo.html">Nuevo veterinario</a>
+                </div>
+
+                <div class="tabla-contenedor tarjeta">
+                    <table class="tabla">
+                        <caption>Veterinarios registrados</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Especialidad</th>
+                                <th scope="col">Días de atención</th>
+                                <th scope="col">Citas</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dr. Pablo Andrade</td>
+                                <td>Medicina general</td>
+                                <td>Lunes a viernes</td>
+                                <td>2</td>
+                                <td class="acciones">
+                                    <a href="veterinarios-detalle.html">Ver</a>
+                                    <a href="veterinarios-editar.html">Editar</a>
+                                    <a href="veterinarios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dra. Lucía Paredes</td>
+                                <td>Dermatología</td>
+                                <td>Lunes, miércoles, viernes y sábado</td>
+                                <td>2</td>
+                                <td class="acciones">
+                                    <a href="veterinarios-detalle.html">Ver</a>
+                                    <a href="veterinarios-editar.html">Editar</a>
+                                    <a href="veterinarios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dra. Valeria Ruiz</td>
+                                <td>Cirugía</td>
+                                <td>Martes, jueves y sábado</td>
+                                <td>2</td>
+                                <td class="acciones">
+                                    <a href="veterinarios-detalle.html">Ver</a>
+                                    <a href="veterinarios-editar.html">Editar</a>
+                                    <a href="veterinarios-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Escribe un nombre o una especialidad en el buscador para filtrar el listado.</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>

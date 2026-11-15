@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Servicios</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="admin-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+            
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="admin-inicio.html">Inicio</a></li>
+                <li><a href="veterinarios-listado.html">Veterinarios</a></li>
+                <li><a class="activo" href="servicios-listado.html">Servicios</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Jorge Salazar</span>
+                <span class="usuario-rol">Administrador</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Administración/Servicios/Editar</p>
+                <h1>Editar servicio</h1>
+                <p class="pagina-descripcion">Edita los datos del servicio. El precio debe estar entre $1,00 y $500,00.</p>
+            </header>
+
+            <article>
+                <form class="formulario tarjeta" action="servicios-listado.html" method="get">
+                    <h2>Datos del servicio</h2>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre del servicio</label>
+                        <input type="text" value="Vacunación" id="nombre" name="nombre" required minlength="3" maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{3,50}" title="Solo letras y espacios, entre 3 y 50 caracteres"
+                            autocomplete="off" placeholder="Consulta general">
+                    </div>
+                    <div class="campo campo-ancho">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" name="descripcion" maxlength="200"
+                            placeholder="Revisión completa de la mascota">Aplicación de vacunas según la edad</textarea>
+                        <span class="texto-pequeno">Máximo 200 caracteres</span>
+                    </div>
+                    <div class="campo">
+                        <label for="precio">Precio (USD)</label>
+                        <input type="number" value="20.00" id="precio" name="precio" required min="1" max="500" step="0.01"
+                            placeholder="15.00">
+                        <span class="texto-pequeno">Entre 1,00 y 500,00 dólares</span>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="boton boton-primario">Guardar</button>
+                        <a class="boton boton-secundario" href="servicios-listado.html">Cancelar</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Cambia los campos para editar el servicio. El nombre tiene entre 3 y 50 caracteres, la descripción un máximo de 200 y el precio va de $1,00 a $500,00.</p>
+            <p class="texto-suave texto-pequeno">Para aceptar los cambios, usa «Guardar», y para descartarlos, «Cancelar».</p>
+        </aside>
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+    
+</body>
+</html>
