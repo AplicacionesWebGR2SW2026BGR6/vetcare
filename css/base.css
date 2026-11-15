@@ -330,10 +330,18 @@ h3 { font-size: var(--fs-base); }
     margin-bottom: var(--espacio-2);
 }
 
+body:not(.acceso) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .pie {
+    margin-top: auto;
     padding: var(--espacio-3);
     font-size: var(--fs-sm);
     color: var(--color-texto-suave);
+    text-align: center;
 }
 
 body.acceso {
@@ -526,6 +534,7 @@ body.acceso {
 
     .pie {
         grid-area: pie;
+        text-align: left;
         padding: var(--espacio-3) var(--espacio-5);
     }
 
