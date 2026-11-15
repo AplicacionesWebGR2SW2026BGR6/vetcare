@@ -6,7 +6,7 @@ Proyecto Bimestre 1 · Desarrollo de Aplicaciones Web · Escuela Politécnica Na
 
 Entrega: **miércoles 18 de noviembre de 2026, 23:59**
 
-- **Sitio publicado:** `https://USUARIO.github.io/vetcare/` *(pendiente)*
+- **Sitio publicado:** `https://aplicacioneswebgr2sw2026bgr6.github.io/vetcare/`
 - **Repositorio:** `https://github.com/AplicacionesWebGR2SW2026BGR6/vetcare`
 
 ## Qué es VetCare
