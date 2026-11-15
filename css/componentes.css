@@ -1,3 +1,5 @@
+/* ---------- Menús de inicio ----------*/
+
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -27,7 +29,8 @@
 }
 
 
-/* Datos de un registro */
+/* ---------- Datos de un registro ----------*/
+
 .datos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -55,7 +58,8 @@ article.tarjeta {
 }
 
 
-/* Estados de las citas */
+/* ---------- Estados de las citas ----------*/
+
 .estado {
     display: inline-block;
     padding: var(--espacio-1) var(--espacio-2);
@@ -81,7 +85,8 @@ article.tarjeta {
 }
 
 
-/* Listas dentro de un detalle */
+/* ---------- Listas dentro de un detalle ----------*/
+
 .lista {
     display: grid;
 }
@@ -95,7 +100,7 @@ article.tarjeta {
 }
 
 
-/* Avisos */
+/* ---------- Avisos ----------*/
 
 .aviso {
     padding: var(--espacio-3);
@@ -104,72 +109,18 @@ article.tarjeta {
     color: var(--color-error-texto);
 }
 
-/* Consulta desplegable de una cita dentro del listado */
-.citas-listado .consulta-cita summary {
-    list-style: none;
-    color: var(--color-primario);
-    font-weight: var(--peso-negrilla);
-    text-decoration: underline;
-    cursor: pointer;
-}
 
-.citas-listado .consulta-cita summary::-webkit-details-marker {
-    display: none;
-}
+/* ---------- Puntos de quiebre ---------- */
 
-.citas-listado .consulta-cita summary:hover {
-    color: var(--color-primario-hover);
-}
-
-.citas-listado .consulta-cita-datos {
-    width: 12rem;
-    padding-top: var(--espacio-2);
-    overflow-wrap: anywhere;
-}
-
-.citas-listado .consulta-cita-titulo {
-    font-weight: var(--peso-negrilla);
-}
-
-.citas-listado .consulta-cita-datos dl {
-    display: grid;
-    gap: var(--espacio-2);
-    margin-top: var(--espacio-2);
-}
-
-.citas-listado .consulta-cita-datos dt {
-    color: var(--color-texto-suave);
-    font-size: var(--fs-xs);
-    text-transform: uppercase;
-}
-
-/* Detalle de cita */
-.citas-detalle .ficha-encabezado {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--espacio-2);
-}
-
-.citas-detalle .codigo-cita {
-    color: var(--color-texto-suave);
-    font-size: var(--fs-xs);
-    font-weight: var(--peso-negrilla);
-}
-
-.citas-detalle .datos {
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-    .citas-detalle .datos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 1200px) {
+    /* Las tarjetas de una misma fila quedan del mismo alto. */
+    .tarjetas {
+        grid-auto-rows: 1fr;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .tarjetas {
-        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

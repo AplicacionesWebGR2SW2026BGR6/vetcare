@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/tablas.css">
     <link rel="stylesheet" href="../css/componentes.css">
 </head>
-<body class="citas-listado">
+<body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
 
     <header class="encabezado">
@@ -28,7 +28,7 @@
                 <li><a href="recepcion-inicio.html">Inicio</a></li>
                 <li><a href="propietarios-listado.html">Propietarios</a></li>
                 <li><a href="mascotas-listado.html">Mascotas</a></li>
-                <li><a class="activo" aria-current="page" href="citas-listado.html">Citas</a></li>
+                <li><a class="activo" href="citas-listado.html">Citas</a></li>
             </ul>
         </nav>
 
@@ -49,23 +49,23 @@
                 <p class="pagina-descripcion">Semana del 16 al 21 de noviembre de 2026.</p>
             </header>
 
-            <article class="listado-citas" aria-label="Listado de citas">
+            <article>
                 <div class="barra">
                     <form class="buscador" action="citas-listado.html" method="get" role="search">
-                        <label class="oculto-visual" for="buscar-cita">Buscar por ID de cita, mascota o propietario</label>
+                        <label class="oculto-visual" for="buscar-cita">Buscar por mascota o propietario</label>
                         <input
                             type="search"
                             id="buscar-cita"
                             name="q"
                             maxlength="50"
-                            placeholder="Buscar por cita, mascota o propietario"
+                            placeholder="Busca por mascota o propietario"
                         >
                         <button class="boton boton-secundario" type="submit">Buscar</button>
                     </form>
                     <a class="boton boton-primario" href="citas-nueva.html">Agendar cita</a>
                 </div>
 
-                <div class="tabla-contenedor tarjeta" role="region" aria-label="Tabla de citas de la semana" tabindex="0">
+                <div class="tabla-contenedor tarjeta">
                     <table class="tabla">
                         <caption>Citas de la semana</caption>
                         <thead>
@@ -81,152 +81,75 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-16T08:30">Lun 16 nov · 08:30</time>
-                                    <span class="cita-id">C01</span>
-                                </th>
+                                <td><time datetime="2026-11-16T08:30">Lun 16 nov · 08:30</time></td>
                                 <td>Toby</td>
                                 <td>Ana Sofía Morales Zambrano</td>
                                 <td>Consulta general</td>
                                 <td>Dr. Pablo Andrade</td>
                                 <td><span class="estado" data-estado="Atendida">Atendida</span></td>
-                                <td>
-                                    <details class="consulta-cita">
-                                        <summary aria-label="Ver datos de la cita C01">Ver</summary>
-                                        <div class="consulta-cita-datos">
-                                            <p class="consulta-cita-titulo">C01 · Toby</p>
-                                            <dl>
-                                                <div><dt>Fecha y hora</dt><dd><time datetime="2026-11-16T08:30">Lunes 16 de noviembre de 2026, 08:30</time></dd></div>
-                                                <div><dt>Propietario</dt><dd>Ana Sofía Morales Zambrano</dd></div>
-                                                <div><dt>Servicio</dt><dd>Consulta general</dd></div>
-                                                <div><dt>Veterinario</dt><dd>Dr. Pablo Andrade</dd></div>
-                                                <div><dt>Estado</dt><dd>Atendida</dd></div>
-                                            </dl>
-                                        </div>
-                                    </details>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C01 de Toby">Ver</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-16T09:00">Lun 16 nov · 09:00</time>
-                                    <span class="cita-id">C02</span>
-                                </th>
+                                <td><time datetime="2026-11-16T09:00">Lun 16 nov · 09:00</time></td>
                                 <td>Michi</td>
                                 <td>Carlos Alberto Vega Ruales</td>
                                 <td>Vacunación</td>
                                 <td>Dra. Lucía Paredes</td>
                                 <td><span class="estado" data-estado="Atendida">Atendida</span></td>
-                                <td>
-                                    <details class="consulta-cita">
-                                        <summary aria-label="Ver datos de la cita C02">Ver</summary>
-                                        <div class="consulta-cita-datos">
-                                            <p class="consulta-cita-titulo">C02 · Michi</p>
-                                            <dl>
-                                                <div><dt>Fecha y hora</dt><dd><time datetime="2026-11-16T09:00">Lunes 16 de noviembre de 2026, 09:00</time></dd></div>
-                                                <div><dt>Propietario</dt><dd>Carlos Alberto Vega Ruales</dd></div>
-                                                <div><dt>Servicio</dt><dd>Vacunación</dd></div>
-                                                <div><dt>Veterinario</dt><dd>Dra. Lucía Paredes</dd></div>
-                                                <div><dt>Estado</dt><dd>Atendida</dd></div>
-                                            </dl>
-                                        </div>
-                                    </details>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C02 de Michi">Ver</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-17T10:30">Mar 17 nov · 10:30</time>
-                                    <span class="cita-id">C03</span>
-                                </th>
+                                <td><time datetime="2026-11-17T10:30">Mar 17 nov · 10:30</time></td>
                                 <td>Kiwi</td>
                                 <td>Sofía Ana Herrera Salazar</td>
                                 <td>Desparasitación</td>
                                 <td>Dr. Pablo Andrade</td>
                                 <td><span class="estado" data-estado="Cancelada">Cancelada</span></td>
-                                <td>
-                                    <details class="consulta-cita">
-                                        <summary aria-label="Ver datos de la cita C03">Ver</summary>
-                                        <div class="consulta-cita-datos">
-                                            <p class="consulta-cita-titulo">C03 · Kiwi</p>
-                                            <dl>
-                                                <div><dt>Fecha y hora</dt><dd><time datetime="2026-11-17T10:30">Martes 17 de noviembre de 2026, 10:30</time></dd></div>
-                                                <div><dt>Propietario</dt><dd>Sofía Ana Herrera Salazar</dd></div>
-                                                <div><dt>Servicio</dt><dd>Desparasitación</dd></div>
-                                                <div><dt>Veterinario</dt><dd>Dr. Pablo Andrade</dd></div>
-                                                <div><dt>Estado</dt><dd>Cancelada</dd></div>
-                                                <div><dt>Motivo</dt><dd>El propietario no pudo asistir</dd></div>
-                                            </dl>
-                                        </div>
-                                    </details>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C03 de Kiwi">Ver</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-18T08:00">Mié 18 nov · 08:00</time>
-                                    <span class="cita-id">C04</span>
-                                </th>
+                                <td><time datetime="2026-11-18T08:00">Mié 18 nov · 08:00</time></td>
                                 <td>Luna</td>
                                 <td>Diego del Carmen Castillo Castro</td>
                                 <td>Control posoperatorio</td>
                                 <td>Dra. Valeria Ruiz</td>
                                 <td><span class="estado" data-estado="Programada">Programada</span></td>
-                                <td>
-                                    <div class="acciones">
-                                        <a href="citas-detalle.html" aria-label="Ver detalle de la cita C04">Ver</a>
-                                        <a href="citas-reprogramar.html" aria-label="Reprogramar la cita C04">Reprogramar</a>
-                                        <a href="citas-cancelar.html" aria-label="Cancelar la cita C04">Cancelar</a>
-                                    </div>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C04 de Luna">Ver</a>
+                                    <a href="citas-reprogramar.html" aria-label="Reprogramar la cita C04 de Luna">Reprogramar</a>
+                                    <a href="citas-cancelar.html" aria-label="Cancelar la cita C04 de Luna">Cancelar</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-18T09:30">Mié 18 nov · 09:30</time>
-                                    <span class="cita-id">C05</span>
-                                </th>
+                                <td><time datetime="2026-11-18T09:30">Mié 18 nov · 09:30</time></td>
                                 <td>Copito</td>
                                 <td>Ana Sofía Morales Zambrano</td>
                                 <td>Consulta general</td>
                                 <td>Dra. Lucía Paredes</td>
                                 <td><span class="estado" data-estado="Programada">Programada</span></td>
-                                <td>
-                                    <details class="consulta-cita">
-                                        <summary aria-label="Ver datos de la cita C05">Ver</summary>
-                                        <div class="consulta-cita-datos">
-                                            <p class="consulta-cita-titulo">C05 · Copito</p>
-                                            <dl>
-                                                <div><dt>Fecha y hora</dt><dd><time datetime="2026-11-18T09:30">Miércoles 18 de noviembre de 2026, 09:30</time></dd></div>
-                                                <div><dt>Propietario</dt><dd>Ana Sofía Morales Zambrano</dd></div>
-                                                <div><dt>Servicio</dt><dd>Consulta general</dd></div>
-                                                <div><dt>Veterinario</dt><dd>Dra. Lucía Paredes</dd></div>
-                                                <div><dt>Estado</dt><dd>Programada</dd></div>
-                                            </dl>
-                                        </div>
-                                    </details>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C05 de Copito">Ver</a>
+                                    <a href="citas-reprogramar.html" aria-label="Reprogramar la cita C05 de Copito">Reprogramar</a>
+                                    <a href="citas-cancelar.html" aria-label="Cancelar la cita C05 de Copito">Cancelar</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">
-                                    <time datetime="2026-11-19T11:00">Jue 19 nov · 11:00</time>
-                                    <span class="cita-id">C06</span>
-                                </th>
+                                <td><time datetime="2026-11-19T11:00">Jue 19 nov · 11:00</time></td>
                                 <td>Toby</td>
                                 <td>Ana Sofía Morales Zambrano</td>
                                 <td>Baño y corte</td>
                                 <td>Dra. Valeria Ruiz</td>
                                 <td><span class="estado" data-estado="Programada">Programada</span></td>
-                                <td>
-                                    <details class="consulta-cita">
-                                        <summary aria-label="Ver datos de la cita C06">Ver</summary>
-                                        <div class="consulta-cita-datos">
-                                            <p class="consulta-cita-titulo">C06 · Toby</p>
-                                            <dl>
-                                                <div><dt>Fecha y hora</dt><dd><time datetime="2026-11-19T11:00">Jueves 19 de noviembre de 2026, 11:00</time></dd></div>
-                                                <div><dt>Propietario</dt><dd>Ana Sofía Morales Zambrano</dd></div>
-                                                <div><dt>Servicio</dt><dd>Baño y corte</dd></div>
-                                                <div><dt>Veterinario</dt><dd>Dra. Valeria Ruiz</dd></div>
-                                                <div><dt>Estado</dt><dd>Programada</dd></div>
-                                            </dl>
-                                        </div>
-                                    </details>
+                                <td class="acciones">
+                                    <a href="citas-detalle.html" aria-label="Ver la cita C06 de Toby">Ver</a>
+                                    <a href="citas-reprogramar.html" aria-label="Reprogramar la cita C06 de Toby">Reprogramar</a>
+                                    <a href="citas-cancelar.html" aria-label="Cancelar la cita C06 de Toby">Cancelar</a>
                                 </td>
                             </tr>
                         </tbody>

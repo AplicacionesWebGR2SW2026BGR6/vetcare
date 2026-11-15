@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/tablas.css">
     <link rel="stylesheet" href="../css/componentes.css">
 </head>
-<body class="citas-detalle citas-cancelar">
+<body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
 
     <header class="encabezado">
@@ -28,7 +28,7 @@
                 <li><a href="recepcion-inicio.html">Inicio</a></li>
                 <li><a href="propietarios-listado.html">Propietarios</a></li>
                 <li><a href="mascotas-listado.html">Mascotas</a></li>
-                <li><a class="activo" aria-current="page" href="citas-listado.html">Citas</a></li>
+                <li><a class="activo" href="citas-listado.html">Citas</a></li>
             </ul>
         </nav>
 
@@ -49,11 +49,8 @@
                 <p class="pagina-descripcion">Indica el motivo antes de confirmar la cancelación.</p>
             </header>
 
-            <article class="tarjeta ficha-cita" aria-labelledby="titulo-ficha">
-                <header class="ficha-encabezado">
-                    <h2 id="titulo-ficha">¿Cancelar la cita de Luna?</h2>
-                    <p class="codigo-cita">C04</p>
-                </header>
+            <article class="tarjeta" aria-labelledby="titulo-ficha">
+                <h2 id="titulo-ficha">¿Cancelar la cita de Luna?</h2>
 
                 <p class="oculto-visual">Estado actual de la cita: Programada.</p>
 
@@ -79,7 +76,7 @@
                 <form class="formulario" action="citas-listado.html" method="get">
                     <input type="hidden" name="cita" value="C04">
 
-                    <div class="campo">
+                    <div class="campo campo-ancho">
                         <label for="motivo-cancelacion">Motivo de la cancelación</label>
                         <textarea
                             id="motivo-cancelacion"
