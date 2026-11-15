@@ -112,15 +112,15 @@ article.tarjeta {
 
 /* ---------- Puntos de quiebre ---------- */
 
+@media (min-width: 768px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (min-width: 1200px) {
     /* Las tarjetas de una misma fila quedan del mismo alto. */
     .tarjetas {
         grid-auto-rows: 1fr;
-    }
-}
-
-@media (min-width: 768px) {
-    .tarjetas {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

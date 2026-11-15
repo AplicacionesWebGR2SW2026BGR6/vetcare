@@ -266,6 +266,7 @@ h3 { font-size: var(--fs-base); }
 .contenido {
     display: grid;
     gap: var(--espacio-4);
+    grid-template-columns: minmax(0, 1fr);
     padding: var(--espacio-3);
 }
 
