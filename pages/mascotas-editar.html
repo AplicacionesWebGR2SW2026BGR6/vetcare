@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Editar mascota</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="recepcion-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="recepcion-inicio.html">Inicio</a></li>
+                <li><a href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="activo" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a href="citas-listado.html">Citas</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>María López</span>
+                <span class="usuario-rol">Recepcionista</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Recepción/Mascotas/Editar</p>
+                <h1>Editar mascota</h1>
+                <p class="pagina-descripcion">Modifica los datos de Toby.</p>
+            </header>
+
+            <form class="formulario tarjeta" action="mascotas-listado.html" method="get">
+                <h2>Datos de la mascota</h2>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" value="Toby" required minlength="2" maxlength="40"
+                        pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,40}" title="Nombre entre 2 y 40 caracteres, solo letras y espacios"
+                        autocomplete="off" placeholder="Toby">
+                    <span class="mensaje-error">Escribe el nombre de la mascota</span>
+                </div>
+                <div class="campo">
+                    <label for="especie">Especie</label>
+                    <select name="especie" id="especie" required>
+                        <option value="">Seleccione una especie</option>
+                        <option value="perro" selected>Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="roedor">Roedor</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="raza">Raza</label>
+                    <input type="text" id="raza" name="raza" value="Mestizo" list="razas" placeholder="Ej. Mestizo">
+                    <datalist id="razas">
+                        <option value="Mestizo">Mestizo</option>
+                        <option value="Beagle">Beagle</option>
+                        <option value="Caniche (Poodle)">Caniche (Poodle)</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Labrador">Labrador</option>
+                        <option value="Schnauzer miniatura">Schnauzer miniatura</option>
+                        <option value="Shih Tzu">Shih Tzu</option>
+                        <option value="Maine Coon">Maine Coon</option>
+                        <option value="Persa">Persa</option>
+                        <option value="Ragdoll">Ragdoll</option>
+                        <option value="Siamés">Siamés</option>
+                        <option value="Bulldog francés">Bulldog francés</option>
+                        <option value="Hámster sirio">Hámster sirio</option>
+                        <option value="Periquito">Periquito</option>
+                        <option value="Conejo enano">Conejo enano</option>
+                    </datalist>
+                </div>
+                <div class="campo">
+                    <fieldset class="opciones">
+                        <legend>Sexo</legend>
+                        <input type="radio" id="sexo-macho" name="sexo" value="macho" required checked>
+                        <label for="sexo-macho">Macho</label>
+                        <input type="radio" id="sexo-hembra" name="sexo" value="hembra" required>
+                        <label for="sexo-hembra">Hembra</label>
+                    </fieldset>
+                </div>
+                <div class="campo">
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento" max="2026-11-18" value="2021-03-15">
+                </div>
+                <div class="campo">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" min="0.1" max="120" step="0.1" placeholder="Ej. 8.4" value="12.5">
+                    <span class="ayuda-campo">De 0,1 a 120 kg</span>
+                </div>
+                <div class="campo">
+                    <label for="propietario">Propietario</label>
+                    <select name="propietario" id="propietario" required>
+                        <option value="">Seleccione un propietario</option>
+                        <option value="P01" selected>Ana Morales</option>
+                        <option value="P02">Carlos Vega</option>
+                        <option value="P03">Sofía Herrera</option>
+                        <option value="P04">Diego Castillo</option>
+                        <option value="P05">Emilio Camino</option>
+                    </select>
+                </div>
+                <div class="campo campo-ancho">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea name="observaciones" id="observaciones" maxlength="300" placeholder="Información adicional de la mascota">Vacunas al día</textarea>
+                    <span class="ayuda-campo">Máximo 300 caracteres</span>
+                </div>
+                <div class="botones">
+                    <button type="submit" class="boton boton-primario">Guardar</button>
+                    <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Si el propietario no está en la lista, regístralo primero en Propietarios.</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+
+</body>
+</html>
