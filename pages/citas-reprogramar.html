@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/tablas.css">
     <link rel="stylesheet" href="../css/componentes.css">
 </head>
-<body class="citas-nueva citas-reprogramar">
+<body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
 
     <header class="encabezado">
@@ -28,7 +28,7 @@
                 <li><a href="recepcion-inicio.html">Inicio</a></li>
                 <li><a href="propietarios-listado.html">Propietarios</a></li>
                 <li><a href="mascotas-listado.html">Mascotas</a></li>
-                <li><a class="activo" aria-current="page" href="citas-listado.html">Citas</a></li>
+                <li><a class="activo" href="citas-listado.html">Citas</a></li>
             </ul>
         </nav>
 
@@ -55,66 +55,61 @@
                 <input type="hidden" name="servicio" value="S05">
                 <input type="hidden" name="estado" value="Programada">
 
-                <fieldset class="grupo-cita">
-                    <legend>Nuevo horario</legend>
-                    <p class="oculto-visual">Cita C04 en estado Programada. La mascota y el servicio no se modifican al reprogramar.</p>
+                <p class="oculto-visual">Cita C04 en estado Programada. La mascota y el servicio no se modifican al reprogramar.</p>
 
-                    <div class="campos-cita">
-                        <div class="campo">
-                            <label for="mascota-actual">Mascota</label>
-                            <select id="mascota-actual" disabled>
-                                <option value="M05" selected>Luna — Diego del Carmen Castillo Castro</option>
-                            </select>
-                        </div>
+                <div class="campo">
+                    <label for="mascota-actual">Mascota</label>
+                    <select id="mascota-actual" disabled>
+                        <option value="M05" selected>Luna — Diego del Carmen Castillo Castro</option>
+                    </select>
+                </div>
 
-                        <div class="campo">
-                            <label for="servicio-actual">Servicio</label>
-                            <select id="servicio-actual" disabled>
-                                <option value="S05" selected>Control posoperatorio</option>
-                            </select>
-                        </div>
+                <div class="campo">
+                    <label for="servicio-actual">Servicio</label>
+                    <select id="servicio-actual" disabled>
+                        <option value="S05" selected>Control posoperatorio</option>
+                    </select>
+                </div>
 
-                        <div class="campo">
-                            <label for="veterinario">Veterinario</label>
-                            <select id="veterinario" name="veterinario" required>
-                                <option value="V01">Dr. Pablo Andrade</option>
-                                <option value="V02">Dra. Lucía Paredes</option>
-                                <option value="V03" selected>Dra. Valeria Ruiz</option>
-                            </select>
-                        </div>
+                <div class="campo">
+                    <label for="veterinario">Veterinario</label>
+                    <select id="veterinario" name="veterinario" required>
+                        <option value="V01">Dr. Pablo Andrade</option>
+                        <option value="V02">Dra. Lucía Paredes</option>
+                        <option value="V03" selected>Dra. Valeria Ruiz</option>
+                    </select>
+                </div>
 
-                        <div class="campo">
-                            <label for="fecha">Fecha</label>
-                            <input
-                                type="date"
-                                id="fecha"
-                                name="fecha"
-                                value="2026-11-18"
-                                min="2026-11-18"
-                                aria-describedby="ayuda-fecha"
-                                required
-                            >
-                            <span class="ayuda-campo" id="ayuda-fecha">Lunes a sábado, no en fechas pasadas</span>
-                        </div>
+                <div class="campo">
+                    <label for="fecha">Fecha</label>
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        value="2026-11-18"
+                        min="2026-11-18"
+                        aria-describedby="ayuda-fecha"
+                        required
+                    >
+                    <span class="ayuda-campo" id="ayuda-fecha">Lunes a sábado, no en fechas pasadas</span>
+                </div>
 
-                        <div class="campo">
-                            <label for="hora">Hora</label>
-                            <input
-                                type="time"
-                                id="hora"
-                                name="hora"
-                                value="08:00"
-                                min="08:00"
-                                max="17:30"
-                                step="1800"
-                                aria-describedby="ayuda-hora mensaje-hora"
-                                required
-                            >
-                            <span class="ayuda-campo" id="ayuda-hora">De 08:00 a 17:30, en bloques de 30 minutos</span>
-                            <span class="mensaje-error" id="mensaje-hora">Elige una hora entre 08:00 y 17:30, en bloques de 30 minutos.</span>
-                        </div>
-                    </div>
-                </fieldset>
+                <div class="campo">
+                    <label for="hora">Hora</label>
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                        value="08:00"
+                        min="08:00"
+                        max="17:30"
+                        step="1800"
+                        aria-describedby="ayuda-hora mensaje-hora"
+                        required
+                    >
+                    <span class="ayuda-campo" id="ayuda-hora">De 08:00 a 17:30, en bloques de 30 minutos</span>
+                    <span class="mensaje-error" id="mensaje-hora">Elige una hora entre 08:00 y 17:30, en bloques de 30 minutos.</span>
+                </div>
 
                 <div class="botones">
                     <button class="boton boton-primario" type="submit">Guardar</button>

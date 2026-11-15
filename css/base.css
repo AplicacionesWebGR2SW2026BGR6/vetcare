@@ -536,6 +536,7 @@ body.acceso {
 @media (min-width: 1200px) {
 
     .contenido {
+        width: 100%;
         grid-template-columns: minmax(0, 1fr) var(--ancho-ayuda);
         align-items: start;
         margin-inline: auto;
