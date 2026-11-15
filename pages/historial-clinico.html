@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Historial clínico</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="veterinario-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="veterinario-inicio.html">Inicio</a></li>
+                <li><a href="agenda-dia.html">Agenda del día</a></li>
+                <li><a class="activo" href="historial-clinico.html">Historial clínico</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>Dra. Valeria Ruiz</span>
+                <span class="usuario-rol">Veterinaria</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Historial clínico</p>
+                <h1>Historial de Toby</h1>
+                <p class="pagina-descripcion">Atenciones anteriores de Toby.</p>
+            </header>
+            <article class="tarjeta">
+                <h2>Datos de la mascota</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>Especie</dt>
+                        <dd>Perro</dd>
+                    </div>
+                    <div>
+                        <dt>Raza</dt>
+                        <dd>Mestizo</dd>
+                    </div>
+                    <div>
+                        <dt>Propietario</dt>
+                        <dd>Ana Sofía Morales Zambrano</dd>
+                    </div>
+                </dl>
+            </article>
+            <article class="tarjeta">
+                <h2><time datetime="2026-11-16">16/11/2026</time>, Consulta general</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>Veterinario</dt>
+                        <dd>Dr. Pablo Andrade</dd>
+                    </div>
+                    <div>
+                        <dt>Peso</dt>
+                        <dd>12,5 kg</dd>
+                    </div>
+                    <div>
+                        <dt>Diagnóstico</dt>
+                        <dd>Revisión general sin hallazgos. Leve sarro dental.</dd>
+                    </div>
+                    <div>
+                        <dt>Tratamiento</dt>
+                        <dd>Limpieza dental en el próximo control. Mantener dieta actual.</dd>
+                    </div>
+                </dl>
+            </article>
+            <article class="tarjeta">
+                <h2><time datetime="2026-09-02">02/09/2026</time>, Desparasitación</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>Veterinario</dt>
+                        <dd>Dr. Pablo Andrade</dd>
+                    </div>
+                    <div>
+                        <dt>Peso</dt>
+                        <dd>12,3 kg</dd>
+                    </div>
+                    <div>
+                        <dt>Diagnóstico</dt>
+                        <dd>Control de parásitos sin signos de infestación.</dd>
+                    </div>
+                    <div>
+                        <dt>Tratamiento</dt>
+                        <dd>Desparasitante oral en dosis única. Repetir en 3 meses.</dd>
+                    </div>
+                </dl>
+            </article>
+            <article class="tarjeta">
+                <h2><time datetime="2026-06-10">10/06/2026</time>, Vacunación</h2>
+                <dl class="datos">
+                    <div>
+                        <dt>Veterinario</dt>
+                        <dd>Dra. Lucía Paredes</dd>
+                    </div>
+                    <div>
+                        <dt>Peso</dt>
+                        <dd>12,1 kg</dd>
+                    </div>
+                    <div>
+                        <dt>Diagnóstico</dt>
+                        <dd>Paciente sano, apto para vacuna.</dd>
+                    </div>
+                    <div>
+                        <dt>Tratamiento</dt>
+                        <dd>Vacuna antirrábica anual. Próxima dosis en un año.</dd>
+                    </div>
+                </dl>
+            </article>
+            <div class="botones">
+                <a class="boton boton-secundario" href="agenda-dia.html">Volver a la agenda</a>
+            </div>
+
+        </section>
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Las atenciones aparecen de la más reciente a la más antigua.</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+
+</body>
+</html>

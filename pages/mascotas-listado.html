@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Mascotas</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="recepcion-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="recepcion-inicio.html">Inicio</a></li>
+                <li><a href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="activo" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a href="citas-listado.html">Citas</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>María López</span>
+                <span class="usuario-rol">Recepcionista</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Recepción/Mascotas</p>
+                <h1>Mascotas</h1>
+                <p class="pagina-descripcion">Busca y gestiona las mascotas registradas</p>
+            </header>
+
+            <div>
+                <div class="barra">
+                    <form class="buscador" action="mascotas-listado.html" method="get">
+                        <label class="oculto-visual" for="buscar">Buscar mascota</label>
+                        <input type="search" id="buscar" name="q" maxlength="50" placeholder="Buscar por mascota o propietario">
+                        <button type="submit" class="boton boton-secundario">Buscar</button>
+                    </form>
+                    <a href="mascotas-nueva.html" class="boton boton-primario">Nueva mascota</a>
+                </div>
+
+                <div class="tabla-contenedor tarjeta">
+                    <table class="tabla">
+                        <caption>Mascotas registradas</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Especie</th>
+                                <th scope="col">Raza</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Toby</td>
+                                <td>Perro</td>
+                                <td>Mestizo</td>
+                                <td>Ana Sofía Morales Zambrano</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Copito</td>
+                                <td>Roedor</td>
+                                <td>Hámster sirio</td>
+                                <td>Ana Sofía Morales Zambrano</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Michi</td>
+                                <td>Gato</td>
+                                <td>Siamés</td>
+                                <td>Carlos Alberto Vega Ruales</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>Ave</td>
+                                <td>Periquito</td>
+                                <td>Sofía Ana Herrera Salazar</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Luna</td>
+                                <td>Perro</td>
+                                <td>Golden Retriever</td>
+                                <td>Diego del Carmen Castillo Castro</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rocky</td>
+                                <td>Perro</td>
+                                <td>Bulldog francés</td>
+                                <td>Emilio Adrián Camino Peña</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nala</td>
+                                <td>Gato</td>
+                                <td>Mestizo</td>
+                                <td>Emilio Adrián Camino Peña</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Perro</td>
+                                <td>Labrador</td>
+                                <td>Sofía Ana Herrera Salazar</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pelusa</td>
+                                <td>Otro</td>
+                                <td>Conejo enano</td>
+                                <td>Carlos Alberto Vega Ruales</td>
+                                <td class="acciones">
+                                    <a href="mascotas-detalle.html">Ver</a>
+                                    <a href="mascotas-editar.html">Editar</a>
+                                    <a href="mascotas-eliminar.html">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Escribe el nombre de la mascota o del propietario y pulsa Buscar.</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+
+</body>
+</html>

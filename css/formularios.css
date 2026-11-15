@@ -33,6 +33,25 @@
      Grupos de campos con su título (por ejemplo "Datos de la mascota").
 */
 
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: var(--espacio-3) var(--espacio-4);
+}
+
+.formulario h2,
+.formulario .botones {
+  grid-column: 1 / -1;
+}
+
+.formulario h2 {
+  margin-bottom: var(--espacio-1);
+  font-size: var(--fs-lg);
+}
+
+.formulario .botones .boton { flex: 1 1 auto; }
+
+
 
 /* ---------- Cada campo ----------
    .campo
@@ -58,7 +77,52 @@
      "10 dígitos, sin guiones".
 */
 
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-1);
+}
 
+.campo-ancho {
+  grid-column: 1 / -1;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: var(--color-texto-suave);
+}
+
+
+.campo input:not([type="radio"], [type="checkbox"]),
+.campo select,
+.campo textarea {
+  min-height: var(--alto-control);
+  border: 1px solid var(--color-borde-control);
+  border-radius: var(--radios-md);
+  padding: 0 var(--espacio-3);
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  font-family: inherit;
+  font-size: var(--fs-base);
+}
+
+.campo label {
+  font-weight: var(--peso-negrilla);
+  font-size: var(--fs-sm);
+}
+
+
+.campo textarea {
+  min-height: 6rem;
+  padding: var(--espacio-2) var(--espacio-3);
+  resize: vertical;
+}
+
+
+.ayuda-campo {
+  font-size: var(--fs-xs);
+  color: var(--color-texto-suave);
+}
 /* ---------- Grupos de opciones ----------
    .opciones
      El <fieldset> de radios o checkboxes (Sexo, Días de atención).
@@ -67,6 +131,30 @@
    .opciones input[type="radio"], .opciones input[type="checkbox"]
      Sin ancho completo ni alto de 48 px (si no, se estiran).
 */
+
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-2);
+  border: 0;
+}
+
+.opciones legend {
+  margin-bottom: var(--espacio-1);
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-negrilla);
+}
+
+.opciones input[type="radio"] {
+  accent-color: var(--color-primario);
+}
+
+.campo .opciones label {
+  margin-right: var(--espacio-3);
+  font-weight: var(--peso-regular);
+}
 
 
 /* ---------- Estados de validación ----------
@@ -92,9 +180,52 @@
      para mostrar un asterisco con ::after.
 */
 
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible {
+  border-color: var(--color-borde-foco);
+}
+
+.campo input:user-invalid,
+.campo select:user-invalid,
+.campo textarea:user-invalid {
+  border-color: var(--color-error);
+  background-color: var(--color-error-fondo);
+}
+
+/* :valid / :invalid: mientras se escribe, el borde dice si el dato ya cumple.
+   Con :not(:placeholder-shown) no se pinta de rojo un campo vacío al entrar. */
+.campo :is(input, select, textarea):focus-visible:valid {
+  border-color: var(--color-valido);
+}
+
+.campo :is(input, textarea):focus-visible:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+/* :required: asterisco en la etiqueta de los campos obligatorios */
+.campo:has(> :required) > label::after,
+.opciones:has(:required) > legend::after {
+  content: " *";
+  color: var(--color-error);
+}
+
+.mensaje-error {
+  display: none;
+  color: var(--color-error);
+  font-size: var(--fs-sm);
+}
+
+.campo :user-invalid ~ .mensaje-error {
+  display: block;
+}
 
 /* ---------- Puntos de quiebre ----------
    @media (min-width: 768px)  { ... }
    @media (min-width: 1200px) { ... }
    Probablemente no hagan falta si las columnas usan auto-fit.
 */
+
+@media (min-width: 768px) {
+  .formulario .botones .boton { flex: 0 0 auto; }
+}

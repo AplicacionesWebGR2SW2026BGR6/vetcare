@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare - Eliminar mascota</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="recepcion-inicio.html">
+            <div class="icon">
+                <img src="../img/logo.svg" alt="Logo de VetCare" >
+            </div>
+
+            <div>
+                <span class="logo-nombre">Huellitas</span>
+                <span class="logo-sistema">VetCare</span>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="recepcion-inicio.html">Inicio</a></li>
+                <li><a href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="activo" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a href="citas-listado.html">Citas</a></li>
+            </ul>
+        </nav>
+        <div class="usuario">
+            <p>
+                <span>María López</span>
+                <span class="usuario-rol">Recepcionista</span>
+            </p>
+            <a class="boton boton-secundario" data-accion="cerrarsesion" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <p class="texto-suave texto-pequeno">Recepción/Mascotas/Eliminar</p>
+                <h1>Eliminar mascota</h1>
+                <p class="pagina-descripcion">Confirma la eliminación de Rocky.</p>
+            </header>
+
+            <article class="tarjeta">
+                <h2>Mascota a eliminar</h2>
+                <p class="aviso">¿Seguro que quieres eliminar a esta mascota? Esta acción no se puede deshacer.</p>
+                <dl class="datos">
+                    <div>
+                        <dt>Nombre</dt>
+                        <dd>Rocky</dd>
+                    </div>
+                    <div>
+                        <dt>Especie</dt>
+                        <dd>Perro</dd>
+                    </div>
+                    <div>
+                        <dt>Raza</dt>
+                        <dd>Bulldog francés</dd>
+                    </div>
+                    <div>
+                        <dt>Propietario</dt>
+                        <dd>Emilio Adrián Camino Peña</dd>
+                    </div>
+                </dl>
+                <form action="mascotas-listado.html" method="get" class="botones">
+                    <button type="submit" class="boton boton-peligro">Confirmar</button>
+                    <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
+                </form>
+            </article>
+        </section>
+
+        <aside class="ayuda tarjeta">
+            <h2>Ayuda</h2>
+            <p class="texto-suave texto-pequeno">Si no estás seguro, pulsa Cancelar para volver al listado sin cambios.</p>
+        </aside>
+
+    </main>
+    <footer class="pie">
+        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+    </footer>
+
+</body>
+</html>
