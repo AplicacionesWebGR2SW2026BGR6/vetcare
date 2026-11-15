@@ -27,8 +27,6 @@ Cada integrante es dueño de un módulo completo: especifica sus casos de uso en
 | 3 | Lenin Jeréz | Citas y agenda | CU-04, CU-05, CU-06 | 6 | `componentes.css` | 3.4 Priorización y 3.5 Mapa navegacional |
 | 4 | Eliana Pinargote | Veterinarios, servicios y documentación | CU-09, CU-10 | 10 | `tablas.css` | 3.1 Visión y PDF final |
 
-> La nota es grupal, pero el docente puede ajustar la de un integrante si el historial de commits o una revisión oral muestran que no participó. Cada uno sube sus cambios desde su propia cuenta.
-
 ## Casos de uso
 
 | ID | Caso de uso | Actor | Integrante | Pantallas |
@@ -43,8 +41,6 @@ Cada integrante es dueño de un módulo completo: especifica sus casos de uso en
 | CU-08 | Consultar historial clínico | Veterinario | 2 | `historial-clinico` |
 | CU-09 | Gestionar veterinarios | Administrador | 4 | `veterinarios-*` (5) |
 | CU-10 | Gestionar servicios | Administrador | 4 | `servicios-*` (5) |
-
-La priorización MoSCoW se define en el documento (entregable 3.4). Lo marcado como *Must* se construye primero y debe quedar completo.
 
 ## Estructura del proyecto
 
@@ -104,10 +100,6 @@ vetcare/
     ├── servicios-editar.html ................................ CU-10 · 4
     └── servicios-eliminar.html .............................. CU-10 · 4
 ```
-
-- **32 pantallas** (mínimo pedido: 18). El mapa navegacional debe coincidir uno a uno con ellas.
-- Todas las pantallas van en `pages/`, sin subcarpetas; solo `index.html` va en la raíz.
-- El Word de entregables y el Excel de datos de ejemplo viven en OneDrive. Los diagramas se editan en `docs/diagramas/` y se pegan como imagen en el Word. Al final, el PDF se sube a `docs/`.
 
 ## Cómo se representa cada operación
 
@@ -181,58 +173,3 @@ Los datos también cumplen las reglas de negocio: citas de lunes a sábado, en b
 - El formulario tiene tres botones de envío, uno por rol, y cada uno lleva `formaction` hacia el menú de su rol (`pages/recepcion-inicio.html`, `pages/veterinario-inicio.html`, `pages/admin-inicio.html`).
 - El correo y la contraseña **no llevan `name`**: se validan igual, pero no aparecen en la URL.
 - Cualquier pantalla se puede abrir escribiendo su dirección. El acceso por rol se representa con la navegación (cada rol solo ve su menú) y se declara como supuesto en la Visión. El CU-01 describe igual el flujo real, incluido "credenciales incorrectas".
-
-## Trabajo con Git
-
-Cada integrante trabaja en su rama y abre un *pull request* a `main`; el Integrante 1 lo revisa y lo fusiona.
-
-| Integrante | Rama |
-| --- | --- |
-| 1 | `modulo-propietarios` |
-| 2 | `modulo-mascotas` |
-| 3 | `modulo-citas` |
-| 4 | `modulo-admin` |
-
-```bash
-git clone https://github.com/USUARIO/vetcare.git
-git switch -c modulo-propietarios                          # tu rama
-
-# trabajar, y luego:
-git add pages/propietarios-*.html
-git commit -m "propietarios: formulario de registro con validación"
-git pull origin main                                       # traer lo último de main antes de subir
-git push -u origin modulo-propietarios
-```
-
-- Commits pequeños y frecuentes, con mensajes que digan qué cambió.
-- Cada uno toca solo sus pantallas y su hoja CSS.
-- **Revisión cruzada** antes del cierre: 1 revisa a 2, 2 a 3, 3 a 4 y 4 a 1.
-
-## Ver el sitio
-
-- **En local:** con XAMPP encendido, en `http://localhost/vetcare/`, o abriendo `index.html` en el navegador.
-- **Publicado:** en GitHub, *Settings → Pages → Deploy from a branch*, rama `main`, carpeta `/ (root)`.
-- Revisen siempre también la versión publicada: ahí aparecen los enlaces rotos por mayúsculas.
-
-## Cronograma
-
-| Fecha | Hito |
-| --- | --- |
-| Mié 4 nov | Arranque: repositorio, estructura de carpetas y acuerdos |
-| Jue 5 nov | `base.css` y plantilla listas |
-| Sáb 7 nov | Reunión de priorización MoSCoW |
-| Dom 8 nov | Entregables escritos terminados: Visión, casos de uso, diagrama, priorización y mapa navegacional |
-| Lun 9 – mar 10 nov | Hojas CSS de cada módulo: `formularios.css`, `componentes.css` y `tablas.css` |
-| Mié 11 – lun 16 nov | Construcción de pantallas |
-| Sáb 14 nov | Pantallas *Must* publicadas en GitHub Pages |
-| Mar 17 nov | Cierre: validadores, Chrome y Firefox, revisión cruzada, ajuste del mapa y PDF |
-| **Mié 18 nov, 23:59** | **Entrega:** URL del repositorio y del sitio en el aula virtual (una sola entrega por grupo) |
-
-## Pendiente de definir
-
-- [ ] Nombres de los integrantes 3 y 4 (tabla de reparto)
-- [x] Estilo visual: paleta y fuentes, en las variables de `base.css`
-- [x] Estructura común (encabezado, menú por rol, contenido y pie) en `plantilla.html`
-- [ ] Priorización MoSCoW final
-- [ ] Relaciones «include» y «extend» del diagrama de casos de uso
-- [ ] Enlaces del repositorio y de GitHub Pages en este README
