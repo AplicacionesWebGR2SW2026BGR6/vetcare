@@ -24,12 +24,14 @@
                 <div class="campo">
                     <label for="correo">Correo electrónico</label>
                     <input type="email" id="correo" required placeholder="nombre@huellitas.com" autocomplete="email">
+                    <span class="mensaje-error">Escribe un correo válido, por ejemplo nombre@huellitas.com.</span>
                 </div>
 
                 <div class="campo">
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" required minlength="8" maxlength="30" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,30}" title="Mínimo 8 caracteres, con al menos una letra y un número.">
                     <span class="ayuda-campo">Mínimo 8 caracteres, con al menos una letra y un número.</span>
+                    <span class="mensaje-error">La contraseña debe tener de 8 a 30 caracteres, con al menos una letra y un número.</span>
                 </div>
 
                 <div class="botones botones-vertical">

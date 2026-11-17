@@ -60,18 +60,21 @@
                             <option value="Dr.">Dr.</option>
                             <option value="Dra.">Dra.</option>
                         </select>
+                        <span class="mensaje-error">Selecciona el trato.</span>
                     </div>
                     <div class="campo">
                         <label for="nombres">Nombres</label>
                         <input type="text" id="nombres" name="nombres" required minlength="2" maxlength="50"
                             pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Solo letras y espacios"
                             autocomplete="given-name" placeholder="Pablo">
+                        <span class="mensaje-error">Escribe los nombres: solo letras y espacios, de 2 a 50 caracteres.</span>
                     </div>
                     <div class="campo">
                         <label for="apellidos">Apellidos</label>
                         <input type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="50"
                             pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{2,50}" title="Solo letras y espacios"
                             autocomplete="family-name" placeholder="Andrade">
+                        <span class="mensaje-error">Escribe los apellidos: solo letras y espacios, de 2 a 50 caracteres.</span>
                     </div>
                     <div class="campo">
                         <label for="cedula">Cédula</label>
@@ -79,6 +82,7 @@
                             pattern="[0-9]{10}" title="10 dígitos numéricos"
                             autocomplete="off" placeholder="0123456789">
                         <span class="ayuda-campo">10 dígitos, sin guiones</span>
+                        <span class="mensaje-error">Escribe la cédula: 10 dígitos, sin guiones.</span>
                     </div>
                     <div class="campo">
                         <label for="celular">Celular</label>
@@ -86,11 +90,13 @@
                             pattern="09[0-9]{8}" title="10 dígitos que empiezan con 09"
                             autocomplete="tel" placeholder="0987654321">
                         <span class="ayuda-campo">10 dígitos, empieza en 09</span>
+                        <span class="mensaje-error">Escribe el celular: 10 dígitos que empiecen con 09.</span>
                     </div>
                     <div class="campo">
                         <label for="correo">Correo electrónico</label>
                         <input type="email" id="correo" name="correo" required maxlength="40"
                             autocomplete="email" placeholder="correo@ejemplo.com">
+                        <span class="mensaje-error">Escribe un correo válido, por ejemplo nombre@ejemplo.com.</span>
                     </div>
                     <div class="campo">
                         <label for="especialidad">Especialidad</label>
@@ -103,6 +109,7 @@
                             <option value="Cardiología">
                             <option value="Odontología">
                         </datalist>
+                        <span class="mensaje-error">Escribe la especialidad, de 2 a 50 caracteres.</span>
                     </div>
 
                     <fieldset class="opciones">
@@ -130,7 +137,7 @@
         </aside>
     </main>
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
     
 </body>
