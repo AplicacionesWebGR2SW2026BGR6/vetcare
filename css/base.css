@@ -451,8 +451,6 @@ body.acceso {
     box-shadow: var(--sombra-lg);
 }
 
-/* Los mensajes de error no ensanchan la tarjeta del login:
-   se ajustan al ancho que ya tiene y el formulario sigue en una columna. */
 .tarjeta-login .mensaje-error {
     width: 0;
     min-width: 100%;
