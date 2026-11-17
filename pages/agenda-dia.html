@@ -50,6 +50,17 @@
                 </p>
             </header>
 
+            <form class="formulario tarjeta" action="agenda-dia.html" method="get">
+                <div class="campo">
+                    <label for="fecha-consulta">Fecha de consulta</label>
+                    <input type="date" id="fecha-consulta" name="fecha" value="2026-11-18" required>
+                    <span class="mensaje-error">Elige la fecha de la agenda que quieres consultar.</span>
+                </div>
+                <div class="botones">
+                    <button class="boton boton-primario" type="submit">Consultar agenda</button>
+                </div>
+            </form>
+
             <article>
                 <div class="tabla-contenedor tarjeta">
                     <table class="tabla">
@@ -89,7 +100,7 @@
     </main>
 
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
 </body>
 </html>

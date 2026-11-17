@@ -68,6 +68,7 @@
                         <option value="roedor">Roedor</option>
                         <option value="otro">Otro</option>
                     </select>
+                    <span class="mensaje-error">Selecciona la especie.</span>
                 </div>
                 <div class="campo">
                     <label for="raza">Raza</label>
@@ -103,11 +104,13 @@
                 <div class="campo">
                     <label for="nacimiento">Fecha de nacimiento</label>
                     <input type="date" id="nacimiento" name="nacimiento" max="2026-11-18">
+                    <span class="mensaje-error">La fecha de nacimiento no puede ser posterior al 18/11/2026.</span>
                 </div>
                 <div class="campo">
                     <label for="peso">Peso (kg)</label>
                     <input type="number" id="peso" name="peso" min="0.1" max="120" step="0.1" placeholder="Ej. 8.4">
                     <span class="ayuda-campo">De 0,1 a 120 kg</span>
+                    <span class="mensaje-error">Ingresa un peso entre 0,1 y 120 kg, con un solo decimal.</span>
                 </div>
                 <div class="campo">
                     <label for="propietario">Propietario</label>
@@ -119,11 +122,13 @@
                         <option value="P04">Diego Castillo</option>
                         <option value="P05">Emilio Camino</option>
                     </select>
+                    <span class="mensaje-error">Selecciona el propietario.</span>
                 </div>
                 <div class="campo campo-ancho">
                     <label for="observaciones">Observaciones</label>
                     <textarea name="observaciones" id="observaciones" maxlength="300" placeholder="Información adicional de la mascota"></textarea>
                     <span class="ayuda-campo">Máximo 300 caracteres</span>
+                    <span class="mensaje-error">Las observaciones pueden tener máximo 300 caracteres.</span>
                 </div>
                 <div class="botones">
                     <button type="submit" class="boton boton-primario">Guardar</button>
@@ -139,7 +144,7 @@
 
     </main>
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
 
 </body>

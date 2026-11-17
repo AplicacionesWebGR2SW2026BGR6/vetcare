@@ -52,7 +52,7 @@
             <article class="tarjeta" aria-labelledby="titulo-ficha">
                 <h2 id="titulo-ficha">¿Cancelar la cita de Luna?</h2>
 
-                <p class="oculto-visual">Estado actual de la cita: Programada.</p>
+                <p>Estado actual de la cita: <span class="estado" data-estado="Programada">Programada</span></p>
 
                 <dl class="datos">
                     <div>
@@ -84,10 +84,10 @@
                             rows="4"
                             maxlength="200"
                             placeholder="Escribe el motivo"
-                            aria-describedby="ayuda-motivo"
                             required
                         ></textarea>
                         <span class="ayuda-campo" id="ayuda-motivo">Obligatorio, máximo 200 caracteres</span>
+                        <span class="mensaje-error">Escribe el motivo de la cancelación, máximo 200 caracteres.</span>
                     </div>
 
                     <div class="botones">
@@ -105,7 +105,7 @@
     </main>
 
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
 </body>
 </html>

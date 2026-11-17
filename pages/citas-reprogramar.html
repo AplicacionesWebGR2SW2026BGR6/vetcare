@@ -78,6 +78,7 @@
                         <option value="V02">Dra. Lucía Paredes</option>
                         <option value="V03" selected>Dra. Valeria Ruiz</option>
                     </select>
+                    <span class="mensaje-error">Selecciona un veterinario.</span>
                 </div>
 
                 <div class="campo">
@@ -88,10 +89,10 @@
                         name="fecha"
                         value="2026-11-18"
                         min="2026-11-18"
-                        aria-describedby="ayuda-fecha"
                         required
                     >
                     <span class="ayuda-campo" id="ayuda-fecha">Lunes a sábado, no en fechas pasadas</span>
+                    <span class="mensaje-error">Elige una fecha desde el 18/11/2026, de lunes a sábado.</span>
                 </div>
 
                 <div class="campo">
@@ -104,7 +105,6 @@
                         min="08:00"
                         max="17:30"
                         step="1800"
-                        aria-describedby="ayuda-hora mensaje-hora"
                         required
                     >
                     <span class="ayuda-campo" id="ayuda-hora">De 08:00 a 17:30, en bloques de 30 minutos</span>
@@ -125,7 +125,7 @@
     </main>
 
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
 </body>
 </html>

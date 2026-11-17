@@ -58,18 +58,21 @@
                         <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50"
                             pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ ]{3,50}" title="Solo letras y espacios, entre 3 y 50 caracteres"
                             autocomplete="off" placeholder="Consulta general">
+                        <span class="mensaje-error">Escribe el nombre del servicio: solo letras y espacios, de 3 a 50 caracteres.</span>
                     </div>
                     <div class="campo campo-ancho">
                         <label for="descripcion">Descripción</label>
                         <textarea id="descripcion" name="descripcion" maxlength="200"
                             placeholder="Revisión completa de la mascota"></textarea>
                         <span class="ayuda-campo">Máximo 200 caracteres</span>
+                        <span class="mensaje-error">La descripción puede tener máximo 200 caracteres.</span>
                     </div>
                     <div class="campo">
                         <label for="precio">Precio (USD)</label>
                         <input type="number" id="precio" name="precio" required min="1" max="500" step="0.01"
                             placeholder="15.00">
                         <span class="ayuda-campo">Entre 1,00 y 500,00 dólares</span>
+                        <span class="mensaje-error">Ingresa un precio entre $1,00 y $500,00.</span>
                     </div>
 
                     <div class="botones">
@@ -87,7 +90,7 @@
         </aside>
     </main>
     <footer class="pie">
-        <p>Clínica Veterinaria Huellitas · Quito · VetCare 2026</p>
+        <p>Clínica Veterinaria Huellitas - Quito - VetCare 2026</p>
     </footer>
     
 </body>
