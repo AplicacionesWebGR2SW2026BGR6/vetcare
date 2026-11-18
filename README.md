@@ -2,14 +2,13 @@
 
 Sistema web de gestión de citas y pacientes para la clínica veterinaria **"Huellitas"** de Quito.
 
-Proyecto Bimestre 1 · Desarrollo de Aplicaciones Web · Escuela Politécnica Nacional
+Proyecto Bimestre 1 - Desarrollo de Aplicaciones Web - Escuela Politécnica Nacional
 
-Entrega: **miércoles 18 de noviembre de 2026, 23:59**
 
 - **Sitio publicado:** `https://aplicacioneswebgr2sw2026bgr6.github.io/vetcare/`
 - **Repositorio:** `https://github.com/AplicacionesWebGR2SW2026BGR6/vetcare`
 
-## Qué es VetCare
+## ¿Qué es VetCare?
 
 La clínica atiende cerca de 40 mascotas al día con tres veterinarios y una recepcionista, y hoy lleva citas e historiales en papel. VetCare representa el sistema que lo reemplaza: registrar propietarios y mascotas, agendar y gestionar citas, registrar atenciones médicas y administrar veterinarios y servicios.
 
@@ -46,59 +45,56 @@ Cada integrante es dueño de un módulo completo: especifica sus casos de uso en
 
 ```
 vetcare/
-├── index.html                    Inicio de sesión ............ CU-01 · 1
+├── index.html                    Inicio de sesión ............ CU-01 - 1
 ├── README.md                     Este archivo ......................... 1
 ├── css/
-│   ├── base.css                  Variables, fuente, estructura, menú, botones · 1
-│   ├── formularios.css           Campos y estados de validación · 2
-│   ├── componentes.css           Menús de inicio, estados de cita, detalle, confirmación · 3
-│   └── tablas.css                Listados, buscador, filas alternas · 4
+│   ├── base.css                  Variables, fuente, estructura, menú, botones - 1
+│   ├── formularios.css           Campos y estados de validación - 2
+│   ├── componentes.css           Menús de inicio, estados de cita, detalle, confirmación - 3
+│   └── tablas.css                Listados, buscador, filas alternas - 4
 ├── img/                          Imágenes del sitio
 ├── docs/
 │   ├── diagramas/
 │   │   ├── casos-de-uso.drawio        Diagrama UML (3.3) ............ 2
 │   │   └── mapa-navegacional.drawio   Mapa de pantallas (3.5) ....... 3
-│   └── VetCare_Entregables.pdf   Entregables 3.1 a 3.5, se sube al final · 4
+│   └── VetCare_Entregables.pdf   Entregables 3.1 a 3.5
 └── pages/
-    ├── plantilla.html            TEMPORAL: molde común (se borra antes de entregar)
-    ├── bloques.html              TEMPORAL: bloques de contenido (se borra antes de entregar)
-    │
     │   Recepcionista
-    ├── recepcion-inicio.html ................................ CU-01 · 1
-    ├── propietarios-listado.html ............................ CU-02 · 1
-    ├── propietarios-detalle.html ............................ CU-02 · 1
-    ├── propietarios-nuevo.html .............................. CU-02 · 1
-    ├── propietarios-editar.html ............................. CU-02 · 1
-    ├── propietarios-eliminar.html ........................... CU-02 · 1
-    ├── mascotas-listado.html ................................ CU-03 · 2
-    ├── mascotas-detalle.html ................................ CU-03 · 2
-    ├── mascotas-nueva.html .................................. CU-03 · 2
-    ├── mascotas-editar.html ................................. CU-03 · 2
-    ├── mascotas-eliminar.html ............................... CU-03 · 2
-    ├── citas-listado.html ................................... CU-05 · 3
-    ├── citas-detalle.html ................................... CU-05 · 3
-    ├── citas-nueva.html ..................................... CU-04 · 3
-    ├── citas-reprogramar.html ............................... CU-05 · 3
-    ├── citas-cancelar.html .................................. CU-05 · 3
+    ├── recepcion-inicio.html ................................ CU-01
+    ├── propietarios-listado.html ............................ CU-02
+    ├── propietarios-detalle.html ............................ CU-02
+    ├── propietarios-nuevo.html .............................. CU-02
+    ├── propietarios-editar.html ............................. CU-02
+    ├── propietarios-eliminar.html ........................... CU-02
+    ├── mascotas-listado.html ................................ CU-03
+    ├── mascotas-detalle.html ................................ CU-03
+    ├── mascotas-nueva.html .................................. CU-03
+    ├── mascotas-editar.html ................................. CU-03
+    ├── mascotas-eliminar.html ............................... CU-03
+    ├── citas-listado.html ................................... CU-05
+    ├── citas-detalle.html ................................... CU-05
+    ├── citas-nueva.html ..................................... CU-04
+    ├── citas-reprogramar.html ............................... CU-05
+    ├── citas-cancelar.html .................................. CU-05
     │
     │   Veterinario
-    ├── veterinario-inicio.html .............................. CU-01 · 1
-    ├── agenda-dia.html ...................................... CU-06 · 3
-    ├── atencion-registrar.html .............................. CU-07 · 2
-    ├── historial-clinico.html ............................... CU-08 · 2
+    ├── veterinario-inicio.html .............................. CU-01
+    ├── agenda-dia.html ...................................... CU-06
+    ├── atencion-registrar.html .............................. CU-07
+    ├── historial-clinico.html ............................... CU-08
     │
     │   Administrador
-    ├── admin-inicio.html .................................... CU-01 · 1
-    ├── veterinarios-listado.html ............................ CU-09 · 4
-    ├── veterinarios-detalle.html ............................ CU-09 · 4
-    ├── veterinarios-nuevo.html .............................. CU-09 · 4
-    ├── veterinarios-editar.html ............................. CU-09 · 4
-    ├── veterinarios-eliminar.html ........................... CU-09 · 4
-    ├── servicios-listado.html ............................... CU-10 · 4
-    ├── servicios-detalle.html ............................... CU-10 · 4
-    ├── servicios-nuevo.html ................................. CU-10 · 4
-    ├── servicios-editar.html ................................ CU-10 · 4
-    └── servicios-eliminar.html .............................. CU-10 · 4
+    ├── admin-inicio.html .................................... CU-01
+    ├── veterinarios-listado.html ............................ CU-09
+    ├── veterinarios-detalle.html ............................ CU-09
+    ├── veterinarios-nuevo.html .............................. CU-09
+    ├── veterinarios-editar.html ............................. CU-09
+    ├── veterinarios-eliminar.html ........................... CU-09
+    ├── servicios-listado.html ............................... CU-10
+    ├── servicios-detalle.html ............................... CU-10
+    ├── servicios-nuevo.html ................................. CU-10
+    ├── servicios-editar.html ................................ CU-10
+    └── servicios-eliminar.html .............................. CU-10
 ```
 
 ## Cómo se representa cada operación
@@ -112,7 +108,7 @@ Como no hay servidor, cada operación CRUD es una pantalla estática:
 | Update | `*-editar` | El mismo formulario, precargado con `value`, `selected` y `checked`. |
 | Delete | `*-eliminar` | Muestra el registro con los botones Confirmar y Cancelar. En citas, eliminar es **cancelar** y exige un motivo. |
 
-## Reglas técnicas del enunciado
+## Reglas técnicas del enunciado del proyecto
 
 - Solo HTML5 y CSS3. **Sin JavaScript** y sin frameworks de CSS (Bootstrap, Tailwind, etc.).
 - **Sin estilos en línea** (`style="…"`): todo va en las hojas externas de `css/`.
@@ -133,8 +129,7 @@ Como no hay servidor, cada operación CRUD es una pantalla estática:
 - **Colores, fuentes y espaciados:** solo con las variables de `:root` (por ejemplo `var(--color-primario)`), nunca escritos a mano.
 - **Formularios:** `method="get"` (GitHub Pages no acepta POST) y `action` hacia la pantalla siguiente del mapa.
 - **Menú:** en cada pantalla, el enlace de su sección lleva `class="activo"` (por ejemplo, las cinco pantallas de mascotas marcan "Mascotas").
-- **Enlaces:** cada enlace lleva a una pantalla del mapa; en la entrega no queda ningún `href="#"`.
-- **Carpetas vacías:** Git no las sube. `img/` necesita un archivo (por ejemplo `.gitkeep`) hasta que tenga imágenes.
+- **Enlaces:** cada enlace lleva a una pantalla del mapa; en la entrega no queda ningún enlace roto.
 
 ## Reglas de negocio en HTML5
 
@@ -159,10 +154,10 @@ HTML no sabe qué día es hoy ni puede bloquear los domingos. Por eso todo el si
 
 ## Datos de ejemplo
 
-Los datos son los mismos en todas las pantallas: **Toby es siempre de Ana Morales**. La fuente es el Excel de OneDrive, donde cada dueño de módulo llena su hoja. La base es esta:
+Los datos son los mismos en todas las pantallas:
 
 - **Veterinarios:** Dr. Pablo Andrade, Dra. Lucía Paredes, Dra. Valeria Ruiz.
-- **Propietarios y mascotas:** Ana Morales (Toby, perro; Copito, roedor), Carlos Vega (Michi, gato), Sofía Herrera (Kiwi, ave), Diego Castillo (Luna, perro).
+- **Propietarios y mascotas:** Ana Morales (Toby, perro; Copito, roedor), Carlos Vega (Michi, gato), Sofía Herrera (Kiwi, ave), Diego Castillo (Luna, perro), Emilio Camino (ninguna mascota).
 - **Usuarios del sistema:** María López (recepcionista), Jorge Salazar (administrador).
 
 Los datos también cumplen las reglas de negocio: citas de lunes a sábado, en bloques de 30 minutos y sin dos citas del mismo veterinario a la misma hora.
@@ -172,4 +167,3 @@ Los datos también cumplen las reglas de negocio: citas de lunes a sábado, en b
 - Sin servidor no se puede verificar una contraseña: solo se valida su **formato**.
 - El formulario tiene tres botones de envío, uno por rol, y cada uno lleva `formaction` hacia el menú de su rol (`pages/recepcion-inicio.html`, `pages/veterinario-inicio.html`, `pages/admin-inicio.html`).
 - El correo y la contraseña **no llevan `name`**: se validan igual, pero no aparecen en la URL.
-- Cualquier pantalla se puede abrir escribiendo su dirección. El acceso por rol se representa con la navegación (cada rol solo ve su menú) y se declara como supuesto en la Visión. El CU-01 describe igual el flujo real, incluido "credenciales incorrectas".

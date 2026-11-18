@@ -92,6 +92,7 @@
                     <div class="campo">
                         <label for="contacto">Contacto preferido</label>
                         <select name="contacto" id="contacto" required>
+                            <option value="">Selecciona…</option>
                             <option value="celular">Celular</option>
                             <option value="correo">Correo electrónico</option>
                         </select>
@@ -100,7 +101,7 @@
                     <div class="campo">
                         <label for="direccion">Dirección</label>
                         <input type="text" id="direccion" name="direccion" required minlength="2" maxlength="150"
-                        autocomplete="street-address" placeholder="Av. La Mañosca y América, Quito">
+                        autocomplete="address-line1" placeholder="Av. La Mañosca y América, Quito">
                         <span class="mensaje-error">Escribe la dirección, de 2 a 150 caracteres.</span>
                     </div>
 
