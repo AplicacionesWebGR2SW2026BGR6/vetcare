@@ -121,6 +121,10 @@ a:hover {
     color: var(--color-primario-hover);
 }
 
+a:active {
+    opacity: 0.75;
+}
+
 :focus-visible {
     outline: var(--contorno-foco);
     outline-offset: 2px;
@@ -134,8 +138,6 @@ h1, h2, h3 {
 h1{ font-size: var(--fs-xl); }
 h2 { font-size: var(--fs-lg); }
 h3 { font-size: var(--fs-base); }
-
-
 
 .dashboard{
     font-size: var(--fs-3xl);
