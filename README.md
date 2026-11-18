@@ -49,7 +49,7 @@ vetcare/
 ├── README.md                     Este archivo
 ├── css/
 │   ├── base.css                  Variables, fuente, estructura, menú, botones
-│   ├── formularios.css           Campos y estados de validación - 2
+│   ├── formularios.css           Campos y estados de validación
 │   ├── componentes.css           Menús de inicio, estados de cita, detalle, confirmación 
 │   └── tablas.css                Listados, buscador, filas alternas
 ├── img/                          Imágenes del sitio
@@ -60,7 +60,7 @@ vetcare/
 │   │   ├── mapa-navegacional.drawio   Mapa de navegación (3.5)
 │   │   ├── mapa-navegacional.png      Mapa de navegación (3.5)
 │   │   └── mapa-navegacional.svg      Mapa de navegación (3.5)
-│   └── VetCare_Entregables.pdf   Entregables 3.1 a 3.5
+│   └── VetCare_Entregables.pdf        Entregables 3.1 a 3.5
 └── pages/
     │   Recepcionista
     ├── recepcion-inicio.html ................................ CU-01
