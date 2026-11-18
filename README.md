@@ -45,18 +45,21 @@ Cada integrante es dueño de un módulo completo: especifica sus casos de uso en
 
 ```
 vetcare/
-├── index.html                    Inicio de sesión ............ CU-01 - 1
-├── README.md                     Este archivo ......................... 1
+├── index.html                    Inicio de sesión
+├── README.md                     Este archivo
 ├── css/
-│   ├── base.css                  Variables, fuente, estructura, menú, botones - 1
+│   ├── base.css                  Variables, fuente, estructura, menú, botones
 │   ├── formularios.css           Campos y estados de validación - 2
-│   ├── componentes.css           Menús de inicio, estados de cita, detalle, confirmación - 3
-│   └── tablas.css                Listados, buscador, filas alternas - 4
+│   ├── componentes.css           Menús de inicio, estados de cita, detalle, confirmación 
+│   └── tablas.css                Listados, buscador, filas alternas
 ├── img/                          Imágenes del sitio
 ├── docs/
 │   ├── diagramas/
-│   │   ├── casos-de-uso.drawio        Diagrama UML (3.3) ............ 2
-│   │   └── mapa-navegacional.drawio   Mapa de pantallas (3.5) ....... 3
+│   │   ├── casos-de-uso.drawio        Diagrama UML (3.3)
+│   │   ├── casos-de-uso.png           Diagrama UML (3.3)
+│   │   ├── mapa-navegacional.drawio   Mapa de navegación (3.5)
+│   │   ├── mapa-navegacional.png      Mapa de navegación (3.5)
+│   │   └── mapa-navegacional.svg      Mapa de navegación (3.5)
 │   └── VetCare_Entregables.pdf   Entregables 3.1 a 3.5
 └── pages/
     │   Recepcionista
